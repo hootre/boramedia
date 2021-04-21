@@ -15,7 +15,7 @@
       "@hooks/*": ["src/hooks/*"],
       "@pages/*": ["src/pages/*"],
       "@theme/*": ["src/theme/*"],
-      "@styles/*": ["src/styles/*"],
+      "@store/*": ["src/module/*"],
       "@utils/*": ["src/utils/*"]
     },
     "allowJs": true,
