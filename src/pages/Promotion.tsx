@@ -8,7 +8,7 @@ const Promotion: VFC<Props> = ({ item }) => {
   return <MainWrapper item={item} />;
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const playlistId = 'PLv2d7VI9OotSn1ThdDeqvBx8QuRSd01qv';
   const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`;
   const res = await Axios.get(apiUrl);
