@@ -10,7 +10,7 @@ export const WrapperContainer = styled.div`
     font-size: 30px;
     color: #fff;
     font-weight: 700;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 20px;
     position: sticky;
     top: 0;
@@ -27,14 +27,7 @@ export const WrapperContainer = styled.div`
   > .MainCard {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
-  > .SubCard {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }

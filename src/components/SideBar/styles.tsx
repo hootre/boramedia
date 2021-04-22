@@ -30,6 +30,7 @@ export const NavItem = styled.div`
     border-bottom: none;
   }
   > h2 {
+    color: #808191;
     font-size: 15px;
     letter-spacing: 0.07em;
     margin-bottom: 24px;
@@ -43,7 +44,7 @@ export const NavItem = styled.div`
     & + li {
       margin-top: 26px;
     }
-    &:hover {
+    &.active {
       color: #fff;
       font-weight: 600;
     }

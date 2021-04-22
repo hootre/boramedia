@@ -6,6 +6,25 @@ export const SubCardBox = styled.div`
   border-radius: 20px;
   overflow: hidden;
   transition: 0.4s;
+  margin: 10px;
+  &:hover {
+    .wrapper {
+      > img {
+        transform: scale(1.6);
+        transform-origin: center;
+      }
+      .author {
+        bottom: -65px;
+        transform: scale(0.6);
+        right: -3px;
+        z-index: 10;
+      }
+    }
+    .maker {
+      opacity: 0;
+    }
+  }
+
   .time {
     position: absolute;
     background: rgba(21, 13, 13, 0.44);
@@ -19,14 +38,15 @@ export const SubCardBox = styled.div`
   }
   .wrapper {
     position: relative;
-    .video {
+    > img {
       max-width: 100%;
-      width: 100%;
-      height: 200px;
+      width: 36.5rem;
+      height: 20rem;
       border-radius: 20px 20px 0 0;
       display: block;
       cursor: pointer;
       transition: 0.4s;
+      object-fit: cover;
     }
     .author {
       position: absolute;

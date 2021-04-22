@@ -1,26 +1,55 @@
 import styled from 'styled-components';
 
 export const MainCardBox = styled.div`
-  background-image: url('https://assets.codepen.io/3364143/skate-removebg-preview.png');
-  background-size: 80%;
-  background-position-x: 150px;
-  background-color: #31abbd;
   display: flex;
   flex-direction: column;
   padding: 30px;
   border-radius: 20px;
+  height: 36rem;
   align-self: stretch;
   overflow: hidden;
   position: relative;
   transition: background 0.3s;
   background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover {
+    > img {
+      transform: scale(1.2);
+    }
+    .blackBox {
+      background-color: rgba(21, 13, 13, 0);
+    }
+  }
+  .blackBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 13, 13, 0.24);
+    z-index: 5;
+  }
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: 0.4s;
+  }
   .title {
     font-size: 25px;
-    max-width: 12ch;
     font-weight: 600;
+    max-width: 600px;
+    max-height: 50px;
+    overflow: hidden;
     letter-spacing: 1px;
     color: #fff;
-    margin-bottom: 30px;
+    z-index: 7;
+    position: absolute;
+    left: 6%;
+    top: 10%;
   }
 
   .time {
@@ -39,7 +68,12 @@ export const Author = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 10px;
-
+  z-index: 10;
+  &.main {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+  }
   .img {
     position: relative;
     flex-shrink: 0;

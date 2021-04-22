@@ -1,14 +1,17 @@
 import CardListItem from '@components/CardListItem';
 import { Author } from '@components/MainCardVideo/styles';
+import { useRouter } from 'next/dist/client/router';
 import { VideoDetailBox, VideoDetailText, VideoList } from './styles';
 
 const VideoDetail = () => {
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <VideoDetailBox>
       <div className="video_box">
         <div className="video">
           <iframe
-            src="https://www.youtube.com/embed/d-DBAkV_oTc"
+            src={`https://www.youtube.com/watch?v=${router.pathname}`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

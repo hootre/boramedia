@@ -16,10 +16,7 @@ const GlobalStyles = createGlobalStyle`
     }
     html{
         font-size: 10px;
-        
-        
     }
-    
     body{
         overflow: hidden;
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -88,6 +85,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: rgb(21 20 26 / 63%);
         border-radius: 10px;
     }
+    
     
 `;
 export default GlobalStyles;
