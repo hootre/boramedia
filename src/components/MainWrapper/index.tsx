@@ -10,15 +10,15 @@ import useTitle from '@hooks/useTitle';
 interface Props {
   item: any;
 }
+const settings = {
+  focusOnSelect: true,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  speed: 500,
+};
 const MainWrapper: VFC<Props> = ({ item: { items } }) => {
   console.log(items);
-  const settings = {
-    focusOnSelect: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    speed: 500,
-  };
   return (
     <WrapperContainer>
       <h1>I AM</h1>
