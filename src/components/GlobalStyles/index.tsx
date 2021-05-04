@@ -18,26 +18,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 10px;
     }
     body{
-        overflow: hidden;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size:16px;
-        transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: ${(props) => props.theme.mode.BACKGROUND_COLOR};
-        background-image: url('https://images.unsplash.com/photo-1445251836269-d158eaa028a6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1951&q=80');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-blend-mode: color-dodge;
-        background-color: rgba(18, 21, 39, 0.86);
         color: #808191;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 1em 2em;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
         &:before {
             position: absolute;
             left: 0;

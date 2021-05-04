@@ -9,12 +9,15 @@ export const MainContainer = styled.div`
   height: 95vh;
   display: flex;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
   box-shadow: 0 20px 50px rgb(0 0 0 / 30%);
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const AppLayout: FC<{}> = ({ children }) => {
