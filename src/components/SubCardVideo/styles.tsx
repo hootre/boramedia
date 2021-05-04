@@ -39,9 +39,9 @@ export const SubCardBox = styled.div`
   .wrapper {
     position: relative;
     > img {
-      max-width: 100%;
-      width: 36.5rem;
-      height: 20rem;
+      max-width: 50rem;
+      width: 100%;
+      height: auto;
       border-radius: 20px 20px 0 0;
       display: block;
       cursor: pointer;
