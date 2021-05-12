@@ -1,12 +1,13 @@
 import MainCardVideo from '@components/MainCardVideo';
 import SubCardVideo from '@components/SubCardVideo';
-import { useState, VFC } from 'react';
+import { useEffect, useState, VFC } from 'react';
 import { WrapperContainer } from './styles';
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import useTitle from '@hooks/useTitle';
+import { useRouter } from 'next/dist/client/router';
 interface Props {
   item: any;
 }
@@ -18,13 +19,13 @@ const settings = {
   speed: 500,
 };
 const MainWrapper: VFC<Props> = ({ item: { items } }) => {
-  console.log(items);
+  const router = useRouter();
   return (
     <WrapperContainer>
-      <h1>I AM</h1>
+      <h1>{router.pathname.substring(1) ? router.pathname.substring(1) : 'MusicVideo'}</h1>
       <div className="MainCard">
-        <MainCardVideo CardData={items[0].snippet} />
-        <MainCardVideo CardData={items[1].snippet} />
+        <MainCardVideo CardData={items[0].snippet} titleName={router.pathname.substring(1)} />
+        <MainCardVideo CardData={items[1].snippet} titleName={router.pathname.substring(1)} />
       </div>
       <h2>Most Watched</h2>
       <div className="SubCard">
@@ -32,7 +33,7 @@ const MainWrapper: VFC<Props> = ({ item: { items } }) => {
           {items &&
             items.map((item: any, index: number) => {
               if (index > 1) {
-                return <SubCardVideo CardData={item.snippet} />;
+                return <SubCardVideo key={item.id} CardData={item.snippet} titleName={router.pathname} />;
               }
             })}
         </Slider>

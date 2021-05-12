@@ -3,17 +3,22 @@ import styled from 'styled-components';
 export const VideoDetailBox = styled.div`
   display: flex;
   margin-left: 30px;
+  width: 100%;
+  padding-bottom: 30px;
   .video_box {
     width: 65%;
     margin-top: 70px;
+    overflow: auto;
     -o-object-fit: cover;
     object-fit: cover;
     transition: 0.3s;
     .video {
       border-radius: 20px;
       overflow: hidden;
-      min-height: 414px;
       position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
       iframe {
         position: absolute;
         top: 0;
@@ -26,11 +31,12 @@ export const VideoDetailBox = styled.div`
 `;
 export const VideoDetailText = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 30px;
   width: 100%;
   .title {
-    font-size: 24px;
+    font-size: 30px;
     color: #fff;
     line-height: 1.4em;
     margin: 16px 0 20px;
@@ -38,12 +44,12 @@ export const VideoDetailText = styled.div`
   .subtitle {
     font-size: 14px;
     line-height: 1.5em;
-    max-width: 60ch;
   }
 `;
 export const VideoList = styled.div`
   margin-left: 30px;
   margin-top: 70px;
+  overflow: auto;
 
   .title {
     color: #fff;

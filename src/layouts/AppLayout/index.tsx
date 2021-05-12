@@ -5,8 +5,7 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   background-color: #1f1d2b;
-  max-height: 900px;
-  height: 95vh;
+  height: 90%;
   display: flex;
   overflow: hidden;
   width: 80%;

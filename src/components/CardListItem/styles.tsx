@@ -5,8 +5,8 @@ export const CardListItemBox = styled.div`
   align-items: center;
   margin-top: 26px;
   img {
-    width: 100px;
-    height: 80px;
+    width: 168px;
+    height: 94px;
     border-radius: 10px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -14,6 +14,10 @@ export const CardListItemBox = styled.div`
     object-position: right;
     margin-right: 16px;
     transition: 0.3s;
+  }
+  .content {
+    width: 202px;
+    height: 72px;
   }
   .name {
     color: #fff;

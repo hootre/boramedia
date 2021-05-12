@@ -1,11 +1,15 @@
 import MainWrapper from '@components/MainWrapper';
 import { VFC } from 'react';
 import Axios from 'axios';
+import { useRouter } from 'next/dist/client/router';
 interface Props {
   item: any;
 }
 const Promotion: VFC<Props> = ({ item }) => {
-  return <MainWrapper item={item} />;
+  const router = useRouter();
+  const { name } = router.query;
+  console.log(item);
+  return <MainWrapper key={item.id} item={item} />;
 };
 
 export async function getStaticProps() {

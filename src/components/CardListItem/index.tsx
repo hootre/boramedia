@@ -1,18 +1,33 @@
+import Link from 'next/link';
+import { VFC } from 'react';
 import { CardListItemBox } from './styles';
-
-const CardListItem = () => {
+interface Props {
+  CardData: {
+    thumbnails: {
+      maxres: {
+        url: string;
+      };
+    };
+    title: string;
+    channelTitle: string;
+    publishedAt: string;
+    resourceId: {
+      videoId: string;
+    };
+  };
+}
+const CardListItem: VFC<Props> = ({ CardData }) => {
   return (
-    <CardListItemBox>
-      <img src="https://cdn.nohat.cc/thumb/f/720/3b55eddcfffa4e87897d.jpg" alt="" />
-      <div className="content">
-        <div className="name">Prepare for your first skateboard jump</div>
-        <div className="maker">Jordan Wise</div>
-        <div className="info">
-          125.908 views
-          <span></span>2 days ago
+    <Link href={`${CardData.resourceId.videoId}`}>
+      <CardListItemBox>
+        <img src={CardData.thumbnails.maxres.url} alt="thumbnails" />
+        <div className="content">
+          <div className="name">{CardData.title}</div>
+          <div className="maker">{CardData.channelTitle}</div>
+          <div className="info">{CardData.publishedAt}</div>
         </div>
-      </div>
-    </CardListItemBox>
+      </CardListItemBox>
+    </Link>
   );
 };
 

@@ -14,13 +14,14 @@ interface Props {
     channelTitle: string;
     publishedAt: string;
     resourceId: {
-      videoId: String;
+      videoId: string;
     };
   };
+  titleName: string;
 }
-const SubCardVideo: VFC<Props> = ({ CardData }) => {
+const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
   return (
-    <Link href={`view/${CardData.resourceId.videoId}`}>
+    <Link href={`${titleName}/${CardData.resourceId.videoId}`}>
       <SubCardBox>
         <div className="time">8 min</div>
         <div className="wrapper">
@@ -31,9 +32,9 @@ const SubCardVideo: VFC<Props> = ({ CardData }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="feather feather-check"
               >
                 <path d="M20 6L9 17l-5-5"></path>
