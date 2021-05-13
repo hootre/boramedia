@@ -23,6 +23,7 @@ interface Props {
   list: [];
 }
 const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
+  console.log(data_detail);
   return (
     <VideoDetailBox>
       <div className="video_box">
@@ -57,7 +58,7 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
               </div>
               <div className="detail">
                 <div className="name">{data_detail.snippet.channelTitle}</div>
-                <div className="info">{data_detail.snippet.publishedAt}</div>
+                <div className="info">{data_detail.snippet.publishedAt.substring(0, 10)}</div>
               </div>
             </Author>
           </div>

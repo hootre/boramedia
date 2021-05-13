@@ -45,7 +45,7 @@ const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
         </div>
         <div className="maker">{CardData.channelTitle}</div>
         <div className="name">{CardData.title}</div>
-        <div className="view">{CardData.publishedAt}</div>
+        <div className="view">{CardData.publishedAt.substring(0, 10)}</div>
       </SubCardBox>
     </Link>
   );

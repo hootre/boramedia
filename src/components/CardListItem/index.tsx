@@ -24,7 +24,7 @@ const CardListItem: VFC<Props> = ({ CardData }) => {
         <div className="content">
           <div className="name">{CardData.title}</div>
           <div className="maker">{CardData.channelTitle}</div>
-          <div className="info">{CardData.publishedAt}</div>
+          <div className="info">{CardData.publishedAt.substring(0, 10)}</div>
         </div>
       </CardListItemBox>
     </Link>

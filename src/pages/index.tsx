@@ -1,11 +1,11 @@
-import MainWrapper from '@components/MainWrapper';
 import { VFC } from 'react';
 import Axios from 'axios';
+import MainFullVideo from '@components/MainFullVideo';
 interface Props {
   item: any;
 }
 const Home: VFC<Props> = ({ item }) => {
-  return <MainWrapper item={item} />;
+  return <MainFullVideo />;
 };
 
 export async function getStaticProps() {

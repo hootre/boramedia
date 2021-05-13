@@ -10,12 +10,11 @@ export const SubCardBox = styled.div`
   &:hover {
     .wrapper {
       > img {
-        transform: scale(1.6);
-        transform-origin: center;
+        transform: scale(1.3);
       }
       .author {
         bottom: -65px;
-        transform: scale(0.6);
+        transform: scale(0.7);
         right: -3px;
         z-index: 10;
       }
@@ -79,13 +78,12 @@ export const SubCardBox = styled.div`
   .name {
     color: #fff;
     font-size: 16px;
-    line-height: 1.4em;
     padding: 12px 20px 0;
     overflow: hidden;
-    background-color: #252936;
-    z-index: 9;
-    position: relative;
-    display: -webkit-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 280px;
+    height: 30px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }

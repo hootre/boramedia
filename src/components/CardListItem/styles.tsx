@@ -14,7 +14,11 @@ export const CardListItemBox = styled.div`
     object-position: right;
     margin-right: 16px;
     transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
+
   .content {
     width: 202px;
     height: 72px;
@@ -27,6 +31,10 @@ export const CardListItemBox = styled.div`
     -webkit-line-clamp: 2;
     overflow: hidden;
     -webkit-box-orient: vertical;
+    transition: 0.3s;
+    &:hover {
+      font-weight: bold;
+    }
   }
   .maker {
     margin: 6px 0;

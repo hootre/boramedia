@@ -9,8 +9,7 @@ const Sketch: VFC<Props> = ({ item }) => {
 };
 
 export async function getStaticProps() {
-  const channelId = 'NsBNBZYPqpc';
-  const playlistId = 'PLZrww0kSsiiBwm9IQbjsWCmAbPhB7nwOu';
+  const playlistId = 'PLP4g2aiQuWr49VztCq2jbkncJwFJNzPi6';
   const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`;
   const res = await Axios.get(apiUrl);
   const data = res.data;

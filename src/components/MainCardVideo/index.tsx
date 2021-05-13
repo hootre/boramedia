@@ -47,7 +47,7 @@ const MainCardVideo: VFC<Props> = ({ CardData, titleName }) => {
           </div>
           <div className="detail">
             <div className="name">{CardData.channelTitle}</div>
-            <div className="info">{CardData.publishedAt}</div>
+            <div className="info">{CardData.publishedAt.substring(0, 10)}</div>
           </div>
         </Author>
       </MainCardBox>
