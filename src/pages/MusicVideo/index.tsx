@@ -1,11 +1,20 @@
 import MainWrapper from '@components/MainWrapper';
 import { VFC } from 'react';
 import Axios from 'axios';
+import Head from 'next/head';
 interface Props {
   data: any;
 }
 const Home: VFC<Props> = ({ data }) => {
-  return <MainWrapper data={data} />;
+  return (
+    <>
+      <Head>
+        <title>SEROP | MusicVideo</title>
+        <meta name="MainPage" content="SEROP MusicVideo." />
+      </Head>
+      <MainWrapper data={data} />
+    </>
+  );
 };
 
 export async function getStaticProps() {

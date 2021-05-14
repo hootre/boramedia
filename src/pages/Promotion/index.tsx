@@ -1,12 +1,20 @@
 import MainWrapper from '@components/MainWrapper';
 import { VFC } from 'react';
 import Axios from 'axios';
-import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
 interface Props {
   data: any;
 }
 const Promotion: VFC<Props> = ({ data }) => {
-  return <MainWrapper data={data} />;
+  return (
+    <>
+      <Head>
+        <title>SEROP | Promotion</title>
+        <meta name="MainPage" content="SEROP Promotion입니다." />
+      </Head>
+      <MainWrapper data={data} />
+    </>
+  );
 };
 
 export async function getStaticProps() {
