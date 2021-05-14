@@ -1,5 +1,6 @@
 import GlobalStyles from '@components/GlobalStyles';
 import SideBar from '@components/SideBar';
+import Head from 'next/head';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
@@ -21,11 +22,13 @@ export const MainContainer = styled.div`
 
 const AppLayout: FC<{}> = ({ children }) => {
   return (
-    <MainContainer>
-      <SideBar />
-      {children}
-      <GlobalStyles />
-    </MainContainer>
+    <>
+      <MainContainer>
+        <SideBar />
+        {children}
+        <GlobalStyles />
+      </MainContainer>
+    </>
   );
 };
 export default AppLayout;

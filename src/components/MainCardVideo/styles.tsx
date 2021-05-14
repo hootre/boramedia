@@ -12,6 +12,18 @@ export const MainCardBox = styled.div`
   transition: background 0.3s;
   background-repeat: no-repeat;
   cursor: pointer;
+  .time {
+    position: absolute;
+    background: rgba(21, 13, 13, 0.44);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    top: 10px;
+    height: 20px;
+    z-index: 1;
+    right: 8px;
+  }
   &:hover {
     > img {
       transform: scale(1.2);
@@ -40,10 +52,9 @@ export const MainCardBox = styled.div`
   }
   .title {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: bold;
     max-width: 600px;
-    max-height: 50px;
-    overflow: hidden;
+    max-height: 55px;
     letter-spacing: 1px;
     color: #fff;
     z-index: 7;
@@ -103,7 +114,7 @@ export const Author = styled.div`
     .name {
       font-size: 15px;
       color: #fff;
-      font-weight: 500;
+      font-weight: bold;
       margin-bottom: 8px;
     }
     .info {

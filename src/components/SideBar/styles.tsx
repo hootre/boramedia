@@ -12,9 +12,10 @@ export const MainSideMenu = styled.div`
   > .logo {
     position: sticky;
     top: 0;
+    padding-left: 60px;
     > img {
-      width: 150px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
     }
   }
 `;

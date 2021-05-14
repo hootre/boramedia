@@ -5,27 +5,31 @@ import { SubCardBox } from './styles';
 
 interface Props {
   CardData: {
-    thumbnails: {
-      maxres: {
-        url: string;
+    contentDetails: {
+      duration: string;
+    };
+    snippet: {
+      thumbnails: {
+        maxres: {
+          url: string;
+        };
       };
+      title: string;
+      channelTitle: string;
+      publishedAt: string;
     };
-    title: string;
-    channelTitle: string;
-    publishedAt: string;
-    resourceId: {
-      videoId: string;
-    };
+
+    id: string;
   };
   titleName: string;
 }
 const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
   return (
-    <Link href={`${titleName}/${CardData.resourceId.videoId}`}>
+    <Link href={`${titleName}/${CardData.id}`}>
       <SubCardBox>
-        <div className="time">8 min</div>
+        <div className="time">{CardData.contentDetails.duration.substring(2, 3)} min</div>
         <div className="wrapper">
-          <img src={CardData.thumbnails.maxres.url} alt="thumbnails" />
+          <img src={CardData.snippet.thumbnails.maxres.url} alt="thumbnails" />
           <Author className="author">
             <div className="img">
               <svg
@@ -43,9 +47,9 @@ const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
             </div>
           </Author>
         </div>
-        <div className="maker">{CardData.channelTitle}</div>
-        <div className="name">{CardData.title}</div>
-        <div className="view">{CardData.publishedAt.substring(0, 10)}</div>
+        <div className="maker">{CardData.snippet.channelTitle}</div>
+        <div className="name">{CardData.snippet.title}</div>
+        <div className="view">{CardData.snippet.publishedAt.substring(0, 10)}</div>
       </SubCardBox>
     </Link>
   );

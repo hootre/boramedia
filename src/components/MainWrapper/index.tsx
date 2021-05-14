@@ -9,7 +9,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import useTitle from '@hooks/useTitle';
 import { useRouter } from 'next/dist/client/router';
 interface Props {
-  item: any;
+  data: any;
 }
 const settings = {
   focusOnSelect: true,
@@ -18,22 +18,23 @@ const settings = {
   slidesToScroll: 1,
   speed: 500,
 };
-const MainWrapper: VFC<Props> = ({ item: { items } }) => {
+const MainWrapper: VFC<Props> = ({ data }) => {
+  console.log(data);
   const router = useRouter();
   return (
     <WrapperContainer>
       <h1>{router.pathname.substring(1) ? router.pathname.substring(1) : 'MusicVideo'}</h1>
       <div className="MainCard">
-        <MainCardVideo CardData={items[0].snippet} titleName={router.pathname.substring(1)} />
-        <MainCardVideo CardData={items[1].snippet} titleName={router.pathname.substring(1)} />
+        <MainCardVideo CardData={data[0]} titleName={router.pathname.substring(1)} />
+        <MainCardVideo CardData={data[1]} titleName={router.pathname.substring(1)} />
       </div>
       <h2>Most Watched</h2>
       <div className="SubCard">
         <Slider {...settings}>
-          {items &&
-            items.map((item: any, index: number) => {
+          {data &&
+            data.map((item: any, index: number) => {
               if (index > 1) {
-                return <SubCardVideo key={item.id} CardData={item.snippet} titleName={router.pathname} />;
+                return <SubCardVideo key={item.id} CardData={item} titleName={router.pathname} />;
               }
             })}
         </Slider>

@@ -17,11 +17,19 @@ const Detail: VFC<Props> = ({ data, data_detail }) => {
 };
 export default React.memo(Detail);
 export const getStaticPaths: GetStaticPaths = async () => {
-  const playlistId = 'PLKihElkMe-Kr1X7ucexEX8VvHLckErSho';
-  const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`;
-  const res = await Axios.get(apiUrl);
+  Axios.defaults.baseURL = 'https://www.googleapis.com/youtube/v3';
+  let params = {};
+
+  // Video List Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet',
+    maxResults: 25,
+    playlistId: 'PLKihElkMe-Kr1X7ucexEX8VvHLckErSho',
+  };
+  const res = await Axios.get('/playlistItems', { params });
   const data = res.data.items;
-  const paths = data.slice(1, 5).map((item: any) => ({
+  const paths = data.map((item: any) => ({
     params: {
       id: `${item.snippet.resourceId.videoId}`,
     },
@@ -33,16 +41,46 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const playlistId = 'PLKihElkMe-Kr1X7ucexEX8VvHLckErSho';
-  const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`;
-  const res = await Axios.get(apiUrl);
+export const getStaticProps: GetStaticProps = async (context) => {
+  Axios.defaults.baseURL = 'https://www.googleapis.com/youtube/v3';
+  let params = {};
 
-  const apiUrl_detail = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${params?.id}&key=${process.env.YOUTUBE_KEY}`;
-  const res_detail = await Axios.get(apiUrl_detail);
+  // Video List Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet',
+    maxResults: 25,
+    playlistId: 'PLKihElkMe-Kr1X7ucexEX8VvHLckErSho',
+  };
+  const res = await Axios.get('/playlistItems', { params });
 
-  const data = res.data.items;
-  const data_detail = res_detail.data.items[0];
+  const videoIdList = res.data.items
+    .map((item: any) => {
+      return item.snippet.resourceId.videoId;
+    })
+    .join();
+
+  // Videos Data Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet,contentDetails',
+    maxResults: 25,
+    id: videoIdList,
+  };
+  const videos_res = await Axios.get('/videos', { params });
+
+  // Video Detail Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet',
+    maxResults: 25,
+    id: context.params?.id,
+  };
+
+  const detail_res = await Axios.get('/videos', { params });
+
+  const data = videos_res.data.items;
+  const data_detail = detail_res.data.items[0];
 
   return {
     props: {

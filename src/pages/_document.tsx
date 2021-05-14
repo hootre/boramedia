@@ -36,7 +36,11 @@ class MyDocument extends Document<Props> {
       <Html>
         <Head>
           <style />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css" />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css"
+          />
+          <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
         </Head>
         <body>
           <Main />

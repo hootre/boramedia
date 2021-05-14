@@ -5,29 +5,34 @@ import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 interface Props {
   CardData: {
-    thumbnails: {
-      maxres: {
-        url: string;
+    contentDetails: {
+      duration: string;
+    };
+    snippet: {
+      thumbnails: {
+        maxres: {
+          url: string;
+        };
       };
+      title: string;
+      channelTitle: string;
+      publishedAt: string;
     };
-    title: string;
-    channelTitle: string;
-    publishedAt: string;
-    resourceId: {
-      videoId: string;
-    };
+
+    id: string;
   };
   titleName: string;
 }
 
 const MainCardVideo: VFC<Props> = ({ CardData, titleName }) => {
   return (
-    <Link href={`${titleName}/${CardData.resourceId.videoId}`}>
+    <Link href={`${titleName}/${CardData.id}`}>
       <MainCardBox>
+        <div className="time">{CardData.contentDetails.duration.substring(2, 3)} min</div>
         <div className="blackBox"></div>
-        <img src={CardData.thumbnails.maxres.url} alt="thumbnails" />
+        <img src={CardData.snippet.thumbnails.maxres.url} alt="thumbnails" />
 
-        <div className="title">{CardData.title}</div>
+        <div className="title">{CardData.snippet.title}</div>
         <Author className="main">
           <div className="img">
             <svg
@@ -46,8 +51,8 @@ const MainCardVideo: VFC<Props> = ({ CardData, titleName }) => {
             />
           </div>
           <div className="detail">
-            <div className="name">{CardData.channelTitle}</div>
-            <div className="info">{CardData.publishedAt.substring(0, 10)}</div>
+            <div className="name">{CardData.snippet.channelTitle}</div>
+            <div className="info">{CardData.snippet.publishedAt.substring(0, 10)}</div>
           </div>
         </Author>
       </MainCardBox>

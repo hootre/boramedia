@@ -44,6 +44,10 @@ export const VideoDetailText = styled.div`
   .subtitle {
     font-size: 14px;
     line-height: 1.5em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
   }
 `;
 export const VideoList = styled.div`

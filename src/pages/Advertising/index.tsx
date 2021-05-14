@@ -2,22 +2,45 @@ import MainWrapper from '@components/MainWrapper';
 import { VFC } from 'react';
 import Axios from 'axios';
 interface Props {
-  item: any;
+  data: any;
 }
-const Advertising: VFC<Props> = ({ item }) => {
-  return <MainWrapper item={item} />;
+
+const Advertising: VFC<Props> = ({ data }) => {
+  return <MainWrapper data={data} />;
 };
 
 export async function getStaticProps() {
-  const channelId = 'UC1j3RC9YeL7sfrc5ZSrV9YA';
-  const playlistId = 'PL5e68lK9hEzfJjS_Xzsz-0EwTGD0CmQLi';
-  const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`;
-  const res = await Axios.get(apiUrl);
-  const data = res.data;
+  Axios.defaults.baseURL = 'https://www.googleapis.com/youtube/v3';
+  let params = {};
+
+  // Video List Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet',
+    maxResults: 25,
+    playlistId: 'PL5e68lK9hEzfJjS_Xzsz-0EwTGD0CmQLi',
+  };
+  const res = await Axios.get('/playlistItems', { params });
+
+  const videoIdList = res.data.items
+    .map((item: any) => {
+      return item.snippet.resourceId.videoId;
+    })
+    .join();
+
+  // Videos Data Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet,contentDetails',
+    maxResults: 25,
+    id: videoIdList,
+  };
+  const videos_res = await Axios.get('/videos', { params });
+  const data = videos_res.data.items;
 
   return {
     props: {
-      item: data,
+      data,
     },
   };
 }
