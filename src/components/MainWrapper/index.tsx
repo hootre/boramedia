@@ -19,14 +19,14 @@ const settings = {
   speed: 500,
 };
 const MainWrapper: VFC<Props> = ({ data }) => {
-  console.log(data);
   const router = useRouter();
+  const title = router.pathname.split('/')[1]
   return (
     <WrapperContainer>
-      <h1>{router.pathname.substring(1) ? router.pathname.substring(1) : 'MusicVideo'}</h1>
+      <h1>{title ? title : 'MusicVideo'}</h1>
       <div className="MainCard">
-        <MainCardVideo CardData={data[0]} titleName={router.pathname.substring(1)} />
-        <MainCardVideo CardData={data[1]} titleName={router.pathname.substring(1)} />
+        <MainCardVideo CardData={data[0]} titleName={title} />
+        <MainCardVideo CardData={data[1]} titleName={title} />
       </div>
       <h2>Most Watched</h2>
       <div className="SubCard">

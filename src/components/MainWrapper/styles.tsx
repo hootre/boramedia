@@ -27,6 +27,7 @@ export const WrapperContainer = styled.div`
   > .MainCard {
     display: grid;
     width: 100%;
+    height: 50%;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;

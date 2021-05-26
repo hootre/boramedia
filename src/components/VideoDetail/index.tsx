@@ -1,7 +1,7 @@
 import CardListItem from '@components/CardListItem';
 import { Author } from '@components/MainCardVideo/styles';
 import VideoList from '@components/VideoList';
-import React, { VFC } from 'react';
+import React, { useCallback, useState, VFC } from 'react';
 import { VideoDetailBox, VideoDetailText } from './styles';
 
 interface Props {
@@ -23,7 +23,10 @@ interface Props {
   list: [];
 }
 const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
-  console.log(data_detail);
+  const [viewMoreButton, setViewMoreButton] = useState(false);
+  const onClickViewMoreButton = useCallback(() => {
+    setViewMoreButton((prev) => !prev);
+  }, []);
   return (
     <VideoDetailBox>
       <div className="video_box">
@@ -36,7 +39,7 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
             allowFullScreen
           ></iframe>
         </div>
-        <VideoDetailText>
+        <VideoDetailText viewMoreButton={viewMoreButton}>
           <div className="author">
             <Author>
               <div className="img">
@@ -63,7 +66,11 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
             </Author>
           </div>
           <div className="title">{data_detail.snippet.title}</div>
-          <div className="subtitle">{data_detail.snippet.description}</div>
+          <div className="subtitle">
+            {data_detail.snippet.description}
+            </div>
+            
+            <div className="viewMoreBtn" onClick={onClickViewMoreButton}>{ viewMoreButton? '접기':'더 보기'}</div>
         </VideoDetailText>
       </div>
       <VideoList titleName={titleName} list={list} />

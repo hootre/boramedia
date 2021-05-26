@@ -5,7 +5,8 @@ export const MainCardBox = styled.div`
   flex-direction: column;
   padding: 30px;
   border-radius: 20px;
-  height: 36rem;
+  min-height: 25rem;
+  height: 100%;
   align-self: stretch;
   overflow: hidden;
   position: relative;

@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+interface DetailText {
+	viewMoreButton: boolean,
+}
 
 export const VideoDetailBox = styled.div`
   display: flex;
@@ -34,7 +37,9 @@ export const VideoDetailText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 30px;
+  border-bottom: 1px solid #888;
   width: 100%;
+  position: relative;
   .title {
     font-size: 30px;
     color: #fff;
@@ -44,11 +49,28 @@ export const VideoDetailText = styled.div`
   .subtitle {
     font-size: 14px;
     line-height: 1.5em;
-    display: -webkit-box;
+    margin-bottom: 30px;
+    display : ${(props: DetailText) => props.viewMoreButton ? 'block' : '-webkit-box'};
     -webkit-line-clamp: 2;
     overflow: hidden;
+		transition: all .2s ease;
     -webkit-box-orient: vertical;
   }
+  
+  .viewMoreBtn{
+      color:#888;
+      background: #fff;
+      position: absolute;
+      z-index: 2;
+      font-weight: bold;
+      cursor: pointer;
+      bottom: -10px;
+      padding: 2px;
+		border: 4px solid #f2f2f2;
+		border-radius: 2em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 `;
 export const VideoList = styled.div`
   margin-left: 30px;
