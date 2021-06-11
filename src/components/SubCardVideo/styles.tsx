@@ -7,6 +7,7 @@ export const SubCardBox = styled.div`
   overflow: hidden;
   transition: 0.4s;
   margin: 10px;
+  height: 100%;
   &:hover {
     .wrapper {
       > img {
@@ -37,15 +38,15 @@ export const SubCardBox = styled.div`
   }
   .wrapper {
     position: relative;
+    height: 65%;
     > img {
-      max-width: 50rem;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      border-radius: 20px 20px 0 0;
-      display: block;
-      cursor: pointer;
-      transition: 0.4s;
+      height: 100%;
       object-fit: cover;
+      transition: 0.4s;
     }
     .author {
       position: absolute;

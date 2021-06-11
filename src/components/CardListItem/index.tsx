@@ -11,6 +11,12 @@ interface Props {
         maxres: {
           url: string;
         };
+        standard: {
+          url: string;
+        };
+        high: {
+          url: string;
+        };
       };
       title: string;
       channelTitle: string;
@@ -24,7 +30,18 @@ const CardListItem: VFC<Props> = ({ CardData }) => {
   return (
     <Link href={`${CardData.id}`}>
       <CardListItemBox>
-        <img src={CardData.snippet.thumbnails.maxres.url} alt="thumbnails" />
+        <div className="imgBox">
+          <img
+            src={
+              CardData.snippet.thumbnails.maxres
+                ? CardData.snippet.thumbnails.maxres.url
+                : CardData.snippet.thumbnails.standard
+                ? CardData.snippet.thumbnails.standard.url
+                : CardData.snippet.thumbnails.high.url
+            }
+            alt="thumbnails"
+          />
+        </div>
         <div className="content">
           <div className="name">{CardData.snippet.title}</div>
           <div className="maker">{CardData.snippet.channelTitle}</div>

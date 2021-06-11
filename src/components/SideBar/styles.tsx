@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const MainSideMenu = styled.div`
   height: 100%;
-  padding: 70px;
+  width: 20%;
+  padding: 70px 40px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -13,7 +14,7 @@ export const MainSideMenu = styled.div`
     position: sticky;
     top: 0;
     padding-left: 60px;
-    > img {
+    img {
       width: 100px;
       height: 100px;
     }
@@ -25,7 +26,6 @@ export const NavItem = styled.div`
   flex-direction: column;
   border-bottom: 1px solid rgb(128 129 145 / 24%);
   padding: 36px 0;
-  width: 145px;
   color: #808191;
   & + & {
     border-bottom: none;
@@ -56,6 +56,9 @@ export const NavItem = styled.div`
       background-color: #353340;
       flex-shrink: 0;
       margin-right: 16px;
+    }
+    a {
+      font-size: 17px;
     }
   }
 `;

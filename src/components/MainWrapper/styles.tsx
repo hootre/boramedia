@@ -32,4 +32,15 @@ export const WrapperContainer = styled.div`
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  .swiper-container {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+  }
 `;

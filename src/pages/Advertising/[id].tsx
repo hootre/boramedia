@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
     part: 'snippet',
     maxResults: 25,
-    playlistId: 'PLpfkvkkwITRmSuaP_w49u-hgHMHigcS1J',
+    playlistId: process.env.NEXT_PUBLIC_ADVERTISING,
   };
   const res = await Axios.get('/playlistItems', { params });
   const data = res.data.items;
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
     part: 'snippet',
     maxResults: 25,
-    playlistId: 'PL5e68lK9hEzfJjS_Xzsz-0EwTGD0CmQLi',
+    playlistId: process.env.NEXT_PUBLIC_ADVERTISING,
   };
   const res = await Axios.get('/playlistItems', { params });
 

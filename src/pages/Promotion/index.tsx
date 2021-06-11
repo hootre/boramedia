@@ -26,7 +26,7 @@ export async function getStaticProps() {
     key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
     part: 'snippet',
     maxResults: 25,
-    playlistId: 'PLpfkvkkwITRljRq42swddZbR0CAsu7opT',
+    playlistId: process.env.NEXT_PUBLIC_PROMOTION,
   };
   const res = await Axios.get('/playlistItems', { params });
 

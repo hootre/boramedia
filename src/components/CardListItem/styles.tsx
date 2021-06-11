@@ -5,14 +5,24 @@ export const CardListItemBox = styled.div`
   align-items: center;
   margin-top: 26px;
   position: relative;
-  img {
+  .imgBox {
+    position: relative;
     width: 168px;
     height: 94px;
-    border-radius: 10px;
     margin-right: 16px;
-    transition: all 0.3s;
-    &:hover {
-      transform: scale(1.1);
+    margin-left: 16px;
+    img {
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
