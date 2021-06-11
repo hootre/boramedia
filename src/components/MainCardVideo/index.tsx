@@ -13,6 +13,12 @@ interface Props {
         maxres: {
           url: string;
         };
+        standard: {
+          url: string;
+        };
+        high: {
+          url: string;
+        };
       };
       title: string;
       channelTitle: string;
@@ -30,7 +36,16 @@ const MainCardVideo: VFC<Props> = ({ CardData, titleName }) => {
       <MainCardBox>
         <div className="time">{CardData.contentDetails.duration.substring(2, 3)} min</div>
         <div className="blackBox"></div>
-        <img src={CardData.snippet.thumbnails.maxres.url} alt="thumbnails" />
+        <img
+          src={
+            CardData.snippet.thumbnails.maxres
+              ? CardData.snippet.thumbnails.maxres.url
+              : CardData.snippet.thumbnails.standard
+              ? CardData.snippet.thumbnails.standard.url
+              : CardData.snippet.thumbnails.high.url
+          }
+          alt="thumbnails"
+        />
 
         <div className="title">{CardData.snippet.title}</div>
         <Author className="main">

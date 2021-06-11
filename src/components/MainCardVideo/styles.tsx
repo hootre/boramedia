@@ -48,7 +48,7 @@ export const MainCardBox = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-
+    object-fit: cover;
     transition: 0.4s;
   }
   .title {
