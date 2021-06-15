@@ -15,5 +15,4 @@ export const FullVideo = styled.section`
     height: 100%;
   }
   cursor: none;
-  pointer-events: none;
 `;
