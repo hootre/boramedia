@@ -68,5 +68,10 @@ const GlobalStyles = createGlobalStyle`
     }
     
     
+
+    /* swiper-slide */
+    .swiper-slide {
+        height: 20%;
+    }
 `;
 export default GlobalStyles;

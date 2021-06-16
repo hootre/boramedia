@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { PC, Tablet, Mobile } from '@utils/MediaQuery';
 interface DetailText {
-	viewMoreButton: boolean,
+  viewMoreButton: boolean;
 }
 
-export const VideoDetailBox = styled.div`
+const VideoDetailBox = styled.div`
   display: flex;
   margin-left: 30px;
   width: 100%;
@@ -32,7 +33,7 @@ export const VideoDetailBox = styled.div`
     }
   }
 `;
-export const VideoDetailText = styled.div`
+const VideoDetailText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,29 +51,29 @@ export const VideoDetailText = styled.div`
     font-size: 14px;
     line-height: 1.5em;
     margin-bottom: 30px;
-    display : ${(props: DetailText) => props.viewMoreButton ? 'block' : '-webkit-box'};
+    display: ${(props: DetailText) => (props.viewMoreButton ? 'block' : '-webkit-box')};
     -webkit-line-clamp: 2;
     overflow: hidden;
-		transition: all .2s ease;
+    transition: all 0.2s ease;
     -webkit-box-orient: vertical;
   }
-  
-  .viewMoreBtn{
-      color:#888;
-      background: #fff;
-      position: absolute;
-      z-index: 2;
-      font-weight: bold;
-      cursor: pointer;
-      bottom: -10px;
-      padding: 2px;
-		border: 4px solid #f2f2f2;
-		border-radius: 2em;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+
+  .viewMoreBtn {
+    color: #888;
+    background: #fff;
+    position: absolute;
+    z-index: 2;
+    font-weight: bold;
+    cursor: pointer;
+    bottom: -10px;
+    padding: 2px;
+    border: 4px solid #f2f2f2;
+    border-radius: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
-export const VideoList = styled.div`
+const VideoList = styled.div`
   margin-left: 30px;
   margin-top: 70px;
   overflow: auto;
@@ -82,3 +83,5 @@ export const VideoList = styled.div`
     font-size: 18px;
   }
 `;
+
+export { VideoDetailBox, VideoDetailText, VideoList };

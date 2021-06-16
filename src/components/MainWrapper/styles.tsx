@@ -32,6 +32,10 @@ export const WrapperContainer = styled.div`
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  > .SubCard {
+    width: 100%;
+    height: 50%;
+  }
   .swiper-container {
     width: 100%;
     padding-bottom: 50px;

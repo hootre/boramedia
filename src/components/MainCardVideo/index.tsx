@@ -1,8 +1,6 @@
-import { useCallback, useEffect, useState, VFC } from 'react';
+import { VFC } from 'react';
 import { Author, MainCardBox } from './styles';
-import ReactPlayer from 'react-player';
 import Link from 'next/link';
-import { useRouter } from 'next/dist/client/router';
 interface Props {
   CardData: {
     contentDetails: {

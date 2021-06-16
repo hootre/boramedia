@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const MainSideMenu = styled.div`
   height: 100%;
-  width: 20%;
   padding: 70px 40px;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,7 @@ export const MainSideMenu = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   > .logo {
-    position: sticky;
+    position: relative;
     top: 0;
     padding-left: 60px;
     img {

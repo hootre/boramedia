@@ -30,7 +30,6 @@ interface Props {
   titleName: string;
 }
 const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
-  console.log(CardData.snippet.thumbnails);
   return (
     <Link href={`${titleName}/${CardData.id}`}>
       <SubCardBox>
