@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainSideMenu = styled.div`
   height: 100%;
-  padding: 70px 40px;
+  padding: 7rem 4rem;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -12,10 +12,10 @@ export const MainSideMenu = styled.div`
   > .logo {
     position: relative;
     top: 0;
-    padding-left: 60px;
+    padding-left: 6rem;
     img {
-      width: 100px;
-      height: 100px;
+      width: 10rem;
+      height: 10rem;
     }
   }
 `;
@@ -31,33 +31,33 @@ export const NavItem = styled.div`
   }
   > h2 {
     color: #808191;
-    font-size: 15px;
+    font-size: 1.5rem;
     letter-spacing: 0.07em;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
   > ul > li {
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2rem;
     cursor: pointer;
     & + li {
-      margin-top: 26px;
+      margin-top: 2.6rem;
     }
     &.active {
       color: #fff;
       font-weight: 600;
     }
     > svg {
-      width: 30px;
-      padding: 8px;
+      width: 3rem;
+      padding: 0.8rem;
       border-radius: 10px;
       background-color: #353340;
       flex-shrink: 0;
       margin-right: 16px;
     }
     a {
-      font-size: 17px;
+      font-size: 1.7rem;
     }
   }
 `;

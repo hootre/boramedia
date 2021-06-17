@@ -9,7 +9,7 @@ import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper/core';
 import { useRouter } from 'next/dist/client/router';
-import { PC } from '@utils/MediaQuery';
+import { PC, Mobile } from '@utils/MediaQuery';
 SwiperCore.use([EffectCoverflow, Pagination]);
 interface Props {
   data: any;
@@ -18,8 +18,8 @@ const MainWrapper: VFC<Props> = ({ data }) => {
   const router = useRouter();
   const title = router.pathname.split('/')[1];
   return (
-    <PC>
-      <WrapperContainer>
+    <WrapperContainer>
+      <PC>
         <h1>{title ? title : '뮤직비디오'}</h1>
         <div className="MainCard">
           <MainCardVideo CardData={data[0]} titleName={title} />
@@ -49,8 +49,9 @@ const MainWrapper: VFC<Props> = ({ data }) => {
               })}
           </Swiper>
         </div>
-      </WrapperContainer>
-    </PC>
+      </PC>
+      <Mobile></Mobile>
+    </WrapperContainer>
   );
 };
 

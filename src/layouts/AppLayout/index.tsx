@@ -1,5 +1,7 @@
 import GlobalStyles from '@components/GlobalStyles';
 import SideBar from '@components/SideBar';
+import MobileSideBar from '@components/SideBar/MobileSideBar';
+import { PC, Mobile } from '@utils/MediaQuery';
 import Head from 'next/head';
 import React, { FC } from 'react';
 import styled from 'styled-components';
@@ -18,13 +20,24 @@ export const MainContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 `;
 
 const AppLayout: FC<{}> = ({ children }) => {
   return (
     <>
       <MainContainer>
-        <SideBar />
+        <PC>
+          <SideBar />
+        </PC>
+        <Mobile>
+          <MobileSideBar />
+        </Mobile>
         {children}
         <GlobalStyles />
       </MainContainer>

@@ -3,15 +3,15 @@ import styled from 'styled-components';
 export const WrapperContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 30px 30px;
+  padding: 0 3rem 3rem;
   flex-grow: 1;
   overflow: auto;
   > h1 {
-    font-size: 30px;
+    font-size: 3rem;
     color: #fff;
     font-weight: 700;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -22,15 +22,15 @@ export const WrapperContainer = styled.div`
     font-size: 24px;
     font-weight: 500;
     color: #fff;
-    margin: 30px 0 20px;
+    margin: 3rem 0 2rem;
   }
   > .MainCard {
     display: grid;
     width: 100%;
     height: 50%;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
   }
   > .SubCard {
     width: 100%;
@@ -38,13 +38,13 @@ export const WrapperContainer = styled.div`
   }
   .swiper-container {
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 5rem;
   }
 
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 200px;
-    height: 300px;
+    width: 20rem;
+    height: 30rem;
   }
 `;

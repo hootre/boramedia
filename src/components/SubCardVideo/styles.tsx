@@ -6,7 +6,7 @@ export const SubCardBox = styled.div`
   border-radius: 20px;
   overflow: hidden;
   transition: 0.4s;
-  margin: 10px;
+  margin: 1rem;
   height: 100%;
   &:hover {
     .wrapper {
@@ -30,7 +30,7 @@ export const SubCardBox = styled.div`
     background: rgba(21, 13, 13, 0.44);
     color: rgba(255, 255, 255, 0.85);
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: 1.2rem;
     border-radius: 6px;
     top: 10px;
     z-index: 1;
@@ -62,7 +62,7 @@ export const SubCardBox = styled.div`
   }
   .maker {
     transition: 0.3s;
-    padding: 20px 20px 0px;
+    padding: 1.2rem 1.2rem 0;
     display: inline-flex;
     position: relative;
     &:after {
@@ -72,26 +72,26 @@ export const SubCardBox = styled.div`
       height: 6px;
       border-radius: 50%;
       position: absolute;
-      top: 26px;
-      right: 5px;
+      top: 1.9rem;
+      right: 0rem;
     }
   }
   .name {
     color: #fff;
-    font-size: 16px;
-    padding: 12px 20px 0;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.2rem 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 280px;
-    height: 30px;
+    width: 28rem;
+    height: 3rem;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 
   .view {
-    font-size: 12px;
-    padding: 12px 20px 20px;
+    font-size: 1.2rem;
+    padding: 1.2rem 1.2rem 0;
     background-color: #252936;
     position: relative;
   }

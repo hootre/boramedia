@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const MainCardBox = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 3rem;
   border-radius: 20px;
   min-height: 25rem;
   height: 100%;
@@ -17,11 +17,11 @@ export const MainCardBox = styled.div`
     position: absolute;
     background: rgba(21, 13, 13, 0.44);
     color: rgba(255, 255, 255, 0.85);
-    padding: 3px 8px;
-    font-size: 12px;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.2rem;
     border-radius: 6px;
-    top: 10px;
-    height: 20px;
+    top: 1rem;
+    height: 2rem;
     z-index: 1;
     right: 8px;
   }
@@ -52,10 +52,10 @@ export const MainCardBox = styled.div`
     transition: 0.4s;
   }
   .title {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: bold;
-    max-width: 600px;
-    max-height: 55px;
+    max-width: 60rem;
+    max-height: 5.5rem;
     letter-spacing: 1px;
     color: #fff;
     z-index: 7;
@@ -68,7 +68,7 @@ export const MainCardBox = styled.div`
     background: rgba(21, 13, 13, 0.44);
     color: #fff;
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: 1.2rem;
     border-radius: 6px;
     position: absolute;
     right: 20px;
@@ -90,7 +90,7 @@ export const Author = styled.div`
     position: relative;
     flex-shrink: 0;
     > svg {
-      width: 16px;
+      width: 1.6rem;
       padding: 2px;
       background-color: #fff;
       color: #0daabc;
@@ -101,8 +101,8 @@ export const Author = styled.div`
       right: 0;
     }
     > img {
-      width: 52px;
-      height: 52px;
+      width: 5.2rem;
+      height: 5.2rem;
       border: 1px solid rgba(255, 255, 255, 0.75);
       padding: 4px;
       border-radius: 50%;
@@ -113,13 +113,13 @@ export const Author = styled.div`
   .detail {
     margin-left: 16px;
     .name {
-      font-size: 15px;
+      font-size: 1.5rem;
       color: #fff;
       font-weight: bold;
       margin-bottom: 8px;
     }
     .info {
-      font-size: 13px;
+      font-size: 1.3rem;
       font-weight: 400;
       color: #fff;
     }

@@ -32,6 +32,18 @@ const VideoDetailBox = styled.div`
       }
     }
   }
+
+  @media (max-width: 1200px) {
+    overflow: scroll;
+    flex-direction: column;
+    padding: 50px;
+    .video_box {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+    }
+  }
 `;
 const VideoDetailText = styled.div`
   display: flex;
@@ -41,15 +53,17 @@ const VideoDetailText = styled.div`
   border-bottom: 1px solid #888;
   width: 100%;
   position: relative;
+  @media (max-width: 1200px) {
+  }
   .title {
-    font-size: 30px;
+    font-size: 3rem;
     color: #fff;
-    line-height: 1.4em;
+    line-height: 1.4rem;
     margin: 16px 0 20px;
   }
   .subtitle {
-    font-size: 14px;
-    line-height: 1.5em;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
     margin-bottom: 30px;
     display: ${(props: DetailText) => (props.viewMoreButton ? 'block' : '-webkit-box')};
     -webkit-line-clamp: 2;
@@ -62,6 +76,7 @@ const VideoDetailText = styled.div`
     color: #888;
     background: #fff;
     position: absolute;
+    font-size: 1rem;
     z-index: 2;
     font-weight: bold;
     cursor: pointer;
@@ -73,15 +88,5 @@ const VideoDetailText = styled.div`
     transform: translateX(-50%);
   }
 `;
-const VideoList = styled.div`
-  margin-left: 30px;
-  margin-top: 70px;
-  overflow: auto;
 
-  .title {
-    color: #fff;
-    font-size: 18px;
-  }
-`;
-
-export { VideoDetailBox, VideoDetailText, VideoList };
+export { VideoDetailBox, VideoDetailText };

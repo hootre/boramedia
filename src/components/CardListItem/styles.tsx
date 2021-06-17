@@ -19,9 +19,12 @@ export const CardListItemBox = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: 0.4s;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.14);
+      transform: perspective(100px) translateZ(-5px);
       &:hover {
-        transform: scale(1.1);
+        transform: perspective(100px) translateZ(0px);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
       }
     }
   }
