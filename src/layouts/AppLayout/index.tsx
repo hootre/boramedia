@@ -35,9 +35,7 @@ const AppLayout: FC<{}> = ({ children }) => {
         <PC>
           <SideBar />
         </PC>
-        <Mobile>
-          <MobileSideBar />
-        </Mobile>
+        <Mobile></Mobile>
         {children}
         <GlobalStyles />
       </MainContainer>

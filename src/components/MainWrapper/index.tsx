@@ -3,7 +3,7 @@ import SubCardVideo from '@components/SubCardVideo';
 import { VFC } from 'react';
 import { WrapperContainer } from './styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import VideoList from '@components/VideoList';
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/navigation/navigation.min.css';
@@ -17,6 +17,7 @@ interface Props {
 const MainWrapper: VFC<Props> = ({ data }) => {
   const router = useRouter();
   const title = router.pathname.split('/')[1];
+  console.log(title);
   return (
     <WrapperContainer>
       <PC>
@@ -50,7 +51,9 @@ const MainWrapper: VFC<Props> = ({ data }) => {
           </Swiper>
         </div>
       </PC>
-      <Mobile></Mobile>
+      <Mobile>
+        <VideoList titleName={title ? title : '뮤직비디오'} list={data} />
+      </Mobile>
     </WrapperContainer>
   );
 };

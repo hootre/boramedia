@@ -28,8 +28,8 @@ const MobileSideBar = () => {
             <a className="content" href="#calender"></a>
           </div>
         </div>
-        <a class="section-static top" href="#profile"></a>
-        <a class="section-static bottom" href="#dashboard"></a>
+        <a className="section-static top" href="#profile"></a>
+        <a className="section-static bottom" href="#dashboard"></a>
       </div>
     </MobileMenu>
   );

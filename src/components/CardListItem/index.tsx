@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { VFC } from 'react';
 import { CardListItemBox } from './styles';
@@ -27,8 +28,10 @@ interface Props {
   };
 }
 const CardListItem: VFC<Props> = ({ CardData }) => {
+  const router = useRouter();
+  const title = router.pathname.split('/')[1];
   return (
-    <Link href={`${CardData.id}`}>
+    <Link href={title.length > 10 ? CardData.id : `${title}/${CardData.id}`}>
       <CardListItemBox>
         <div className="imgBox">
           <img
