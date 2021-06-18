@@ -57,12 +57,10 @@ const VideoDetailText = styled.div`
   .title {
     font-size: 3rem;
     color: #fff;
-    line-height: 1.4rem;
     margin: 16px 0 20px;
   }
   .subtitle {
     font-size: 1.4rem;
-    line-height: 1.5rem;
     margin-bottom: 30px;
     display: ${(props: DetailText) => (props.viewMoreButton ? 'block' : '-webkit-box')};
     -webkit-line-clamp: 2;

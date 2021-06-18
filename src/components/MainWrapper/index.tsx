@@ -17,7 +17,6 @@ interface Props {
 const MainWrapper: VFC<Props> = ({ data }) => {
   const router = useRouter();
   const title = router.pathname.split('/')[1];
-  console.log(title);
   return (
     <WrapperContainer>
       <PC>
@@ -41,10 +40,10 @@ const MainWrapper: VFC<Props> = ({ data }) => {
             className="mySwiper"
           >
             {data &&
-              data.map((item: any, index: number) => {
+              data.map((item: any) => {
                 return (
-                  <SwiperSlide>
-                    <SubCardVideo key={item.id} CardData={item} titleName={router.pathname} />
+                  <SwiperSlide key={item.id}>
+                    <SubCardVideo CardData={item} titleName={router.pathname} />
                   </SwiperSlide>
                 );
               })}

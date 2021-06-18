@@ -29,9 +29,10 @@ interface Props {
 }
 const CardListItem: VFC<Props> = ({ CardData }) => {
   const router = useRouter();
-  const title = router.pathname.split('/')[1];
+  const title = router.pathname.split('/');
+  console.log(title);
   return (
-    <Link href={title.length > 10 ? CardData.id : `${title}/${CardData.id}`}>
+    <Link href={title[2] ? CardData.id : `${title[1]}/${CardData.id}`}>
       <CardListItemBox>
         <div className="imgBox">
           <img

@@ -31,14 +31,20 @@ export const MainContainer = styled.div`
 const AppLayout: FC<{}> = ({ children }) => {
   return (
     <>
-      <MainContainer>
-        <PC>
+      <PC>
+        <MainContainer>
           <SideBar />
-        </PC>
-        <Mobile></Mobile>
-        {children}
-        <GlobalStyles />
-      </MainContainer>
+
+          {children}
+          <GlobalStyles />
+        </MainContainer>
+      </PC>
+      <Mobile>
+        <MainContainer>
+          {children}
+          <GlobalStyles />
+        </MainContainer>
+      </Mobile>
     </>
   );
 };

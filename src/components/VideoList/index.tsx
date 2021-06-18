@@ -11,7 +11,7 @@ const VideoList: VFC<Props> = ({ titleName, list }) => {
       <div className="title">{titleName} Videos</div>
       {list &&
         list.map((item: any, index: number) => {
-          return <CardListItem CardData={item} />;
+          return <CardListItem key={item.id} CardData={item} />;
         })}
     </VideoListBox>
   );
