@@ -2,7 +2,6 @@ import GlobalStyles from '@components/GlobalStyles';
 import SideBar from '@components/SideBar';
 import MobileSideBar from '@components/SideBar/MobileSideBar';
 import { PC, Mobile } from '@utils/MediaQuery';
-import Head from 'next/head';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
@@ -34,13 +33,13 @@ const AppLayout: FC<{}> = ({ children }) => {
       <PC>
         <MainContainer>
           <SideBar />
-
           {children}
           <GlobalStyles />
         </MainContainer>
       </PC>
       <Mobile>
         <MainContainer>
+          <MobileSideBar />
           {children}
           <GlobalStyles />
         </MainContainer>

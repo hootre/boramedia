@@ -21,6 +21,7 @@ const MainWrapper: VFC<Props> = ({ data }) => {
     <WrapperContainer>
       <PC>
         <h1>{title ? title : '뮤직비디오'}</h1>
+
         <div className="MainCard">
           <MainCardVideo CardData={data[0]} titleName={title} />
           <MainCardVideo CardData={data[1]} titleName={title} />

@@ -7,29 +7,31 @@ const MobileSideBar = () => {
     setMenuToggle((prev) => !prev);
   }, [menuToggle]);
   return (
-    <MobileMenu className={`base ${menuToggle && 'close'}`}>
+    <MobileMenu className={`screen ${menuToggle && 'open'}`}>
+      <div className="circle"></div>
       <div className="menu">
-        <div className="icon" onClick={onMenuClick}>
-          <div className="bar"></div>
-        </div>
+        <ul>
+          <li className="">
+            <a href="">About</a>
+          </li>
+          <li className="">
+            <a href="">Share</a>
+          </li>
+          <li className="">
+            <a href="">Activity</a>
+          </li>
+          <li className="">
+            <a href="">Settings</a>
+          </li>
+          <li className="">
+            <a href="">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div className="icons">
-        <i className="fa fa-user" aria-hidden="true"></i>
-        <i className="fa fa-calendar-o" aria-hidden="true"></i>
-        <i className="fa fa-tachometer" aria-hidden="true"></i>
-
-        <i className="fa fa-tachometer" aria-hidden="true"></i>
-
-        <i className="fa fa-tachometer" aria-hidden="true"></i>
-      </div>
-      <div className="section">
-        <div className="cover1">
-          <div className="cover2">
-            <a className="content" href="#calender"></a>
-          </div>
-        </div>
-        <a className="section-static top" href="#profile"></a>
-        <a className="section-static bottom" href="#dashboard"></a>
+      <div className="burger" onClick={onMenuClick}>
+        <div className="x"></div>
+        <div className="y"></div>
+        <div className="z"></div>
       </div>
     </MobileMenu>
   );
