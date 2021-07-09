@@ -6,6 +6,7 @@ export const WrapperContainer = styled.div`
   padding: 0 3rem 3rem;
   flex-grow: 1;
   overflow: auto;
+  border: 1rem solid #d45ad8;
   > h1 {
     font-size: 3rem;
     color: #fff;
@@ -15,7 +16,6 @@ export const WrapperContainer = styled.div`
     position: sticky;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, #1f1d2b 0%, #1f1d2b 78%, rgba(31, 29, 43, 0) 100%);
     z-index: 11;
   }
   > h2 {

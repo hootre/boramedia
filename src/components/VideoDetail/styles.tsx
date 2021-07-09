@@ -7,7 +7,9 @@ interface DetailText {
 const VideoDetailBox = styled.div`
   display: flex;
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  border: 1rem solid #d45ad8;
   .video_box {
     width: 65%;
     margin-top: 70px;

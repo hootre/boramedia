@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-  background-color: #1f1d2b;
+  background-color: rgb(0 0 0 / 70%);
   height: 90%;
   display: flex;
   overflow: hidden;

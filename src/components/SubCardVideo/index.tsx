@@ -33,7 +33,6 @@ const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
   return (
     <Link href={`${titleName}/${CardData.id}`}>
       <SubCardBox>
-        <div className="time">{CardData.contentDetails.duration.substring(2, 3)} min</div>
         <div className="wrapper">
           <img
             src={

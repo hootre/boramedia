@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SubCardBox = styled.div`
   position: relative;
-  background-color: #252936;
+  background: rgba(21, 13, 13, 0.44);
   border-radius: 20px;
   overflow: hidden;
   transition: 0.4s;
@@ -92,7 +92,6 @@ export const SubCardBox = styled.div`
   .view {
     font-size: 1.2rem;
     padding: 1.2rem 1.2rem 0;
-    background-color: #252936;
     position: relative;
   }
 `;

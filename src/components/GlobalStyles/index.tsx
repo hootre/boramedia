@@ -25,11 +25,8 @@ const GlobalStyles = createGlobalStyle`
             top: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-            163deg,
-            rgba(31, 29, 43, 1) 21%,
-            rgba(31, 29, 43, 0.3113620448179272) 64%
-            );
+            background-image: url('https://dark-ux.com/wp-content/uploads/2020/08/wordpress-581849_1920.jpg');
+            background-size: cover;
             opacity: 0.4;
             content: "";
         }
