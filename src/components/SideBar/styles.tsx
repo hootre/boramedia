@@ -8,16 +8,18 @@ export const MainSideMenu = styled.div`
   transition-duration: 0.2s;
   overflow-y: auto;
   overflow-x: hidden;
+  padding: 3rem;
   /* box-shadow: 10px 0 0 #d45ad8; */
   > .logo {
-    height: 400px;
+    height: 40rem;
     img {
-      width: 28rem;
-      height: 28rem;
+      width: 18rem;
+      height: 18rem;
       position: relative;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      border-radius: 50%;
     }
   }
 `;
@@ -25,11 +27,10 @@ export const MainSideMenu = styled.div`
 export const NavItem = styled.div`
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgb(128 129 145 / 24%);
   color: #fff;
-  & + & {
+  /* & + & {
     border-bottom: none;
-  }
+  } */
   > ul > li {
     display: flex;
     align-items: center;
@@ -37,27 +38,68 @@ export const NavItem = styled.div`
     text-decoration: none;
     font-size: 2rem;
     cursor: pointer;
+    &:hover {
+      animation-name: wobble-horizontal;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+    }
     & + li {
       margin-top: 2.6rem;
     }
-    &.active,
-    &:hover {
-      color: #fff;
-      font-weight: 600;
-      background: #d45ad8;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-    }
-    a:hover {
-      color: #fff;
-      font-weight: bold;
-    }
     a {
-      font-size: 1.7rem;
-      height: 3rem;
-      line-height: 3rem;
-      white-space: normal;
-      display: block;
+      width: 20rem;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      height: 55px;
+      line-height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+
+      border-radius: 50px;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+
+      background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+      box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    }
+
+    a:hover {
+      background-position: 100% 0;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  @keyframes wobble-horizontal {
+    16.65% {
+      transform: translateX(8px);
+    }
+
+    33.3% {
+      transform: translateX(-6px);
+    }
+
+    49.95% {
+      transform: translateX(4px);
+    }
+
+    66.6% {
+      transform: translateX(-2px);
+    }
+
+    83.25% {
+      transform: translateX(1px);
+    }
+
+    100% {
+      transform: translateX(0);
     }
   }
 `;

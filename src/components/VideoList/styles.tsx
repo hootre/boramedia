@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const VideoListBox = styled.div`
-  margin-left: 30px;
-  margin-top: 70px;
+  margin-left: 3rem;
+  margin-top: 16rem;
+  padding-right: 3rem;
   width: 30%;
   overflow-y: scroll;
   overflow-x: hidden;
   cursor: pointer;
 
   .title {
-    color: #fff;
+    color: #222;
     font-size: 18px;
   }
   @media (max-width: 1200px) {

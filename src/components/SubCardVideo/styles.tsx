@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SubCardBox = styled.div`
   position: relative;
-  background: rgba(21, 13, 13, 0.44);
+  background: rgba(118, 75, 162, 0.5);
   border-radius: 20px;
   overflow: hidden;
   transition: 0.4s;
@@ -65,6 +65,13 @@ export const SubCardBox = styled.div`
     padding: 1.2rem 1.2rem 0;
     display: inline-flex;
     position: relative;
+    font-size: 1.6rem;
+    font-weight: bold;
+    overflow: hidden;
+    width: 28rem;
+    height: 3.5rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     &:after {
       content: '';
       background-color: #22b07d;
@@ -84,14 +91,21 @@ export const SubCardBox = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 28rem;
-    height: 3rem;
+    height: 3.5rem;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 
   .view {
-    font-size: 1.2rem;
-    padding: 1.2rem 1.2rem 0;
+    font-size: 1.5rem;
+    padding: 0 1.2rem 0;
     position: relative;
+  }
+  @media (max-width: 1200px) {
+    .maker,
+    .name,
+    .view {
+      font-size: 2.2rem;
+    }
   }
 `;

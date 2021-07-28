@@ -10,7 +10,6 @@ export const CardListItemBox = styled.div`
     width: 168px;
     height: 94px;
     margin-right: 16px;
-    margin-left: 16px;
     img {
       border-radius: 10px;
       position: absolute;
@@ -33,17 +32,14 @@ export const CardListItemBox = styled.div`
     width: 202px;
     height: 72px;
     .name {
-      color: #fff;
+      color: #2e2e2e;
       font-size: 14px;
       line-height: 1.3em;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       overflow: hidden;
       -webkit-box-orient: vertical;
-      transition: 0.3s;
-      &:hover {
-        font-weight: bold;
-      }
+      transition: all 0.3s ease-in;
     }
     .maker {
       margin: 6px 0;
@@ -71,6 +67,10 @@ export const CardListItemBox = styled.div`
       top: 72px;
       z-index: 1;
       right: -6px;
+    }
+
+    &:hover .name {
+      font-weight: bold;
     }
   }
 `;

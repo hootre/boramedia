@@ -18,24 +18,21 @@ const GlobalStyles = createGlobalStyle`
         font-size: 10px;
     }
     body{
-        color: #808191;
-        &:before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://dark-ux.com/wp-content/uploads/2020/08/wordpress-581849_1920.jpg');
-            background-size: cover;
-            opacity: 0.4;
-            content: "";
-        }
+        background-color: #222222;
+  background: repeating-linear-gradient(
+      45deg,
+      #2b2b2b 0%,
+      #2b2b2b 10%,
+      #222222 0%,
+      #222222 50%
+    )
+    0 / 15px 15px;
         
     }
     
     @media all and (min-width:768px) and (max-width:1523px) {
         html{
-            font-size: 8px;
+            font-size: 6px;
         }
         
     }
@@ -81,5 +78,12 @@ const GlobalStyles = createGlobalStyle`
     .swiper-slide {
         height: 20%;
     }
+    
+    @font-face {
+        font-family: 'BMEULJIROTTF';
+        font-style: normal;
+        font-weight: 100;
+        src: url('../.././fonts/BMEULJIROTTF.ttf') format('ttf');
+      }
 `;
 export default GlobalStyles;

@@ -113,13 +113,13 @@ export const Author = styled.div`
   .detail {
     margin-left: 16px;
     .name {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #fff;
       font-weight: bold;
       margin-bottom: 8px;
     }
     .info {
-      font-size: 1.3rem;
+      font-size: 2rem;
       font-weight: 400;
       color: #fff;
     }

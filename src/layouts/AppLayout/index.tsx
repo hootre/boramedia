@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-  background-color: rgb(0 0 0 / 70%);
+  background-color: rgb(255 255 255 / 70%);
   height: 90%;
   display: flex;
   overflow: hidden;
@@ -14,7 +14,6 @@ export const MainContainer = styled.div`
   border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
-  box-shadow: 0 20px 50px rgb(0 0 0 / 30%);
   position: relative;
   top: 50%;
   left: 50%;

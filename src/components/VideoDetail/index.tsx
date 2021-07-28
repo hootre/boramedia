@@ -3,7 +3,7 @@ import VideoList from '@components/VideoList';
 import React, { useCallback, useState, VFC } from 'react';
 import { VideoDetailBox, VideoDetailText } from './styles';
 
-import { PC, Tablet, Mobile } from '@utils/MediaQuery';
+import { Tablet } from '@utils/MediaQuery';
 interface Props {
   titleName: string;
   data_detail: {

@@ -20,35 +20,37 @@ const MainWrapper: VFC<Props> = ({ data }) => {
   return (
     <WrapperContainer>
       <PC>
-        <h1>{title ? title : '뮤직비디오'}</h1>
+        <div className="contentContainer">
+          <h1>{title ? title : '뮤직비디오'}</h1>
 
-        <div className="MainCard">
-          <MainCardVideo CardData={data[0]} titleName={title} />
-          <MainCardVideo CardData={data[1]} titleName={title} />
-        </div>
-        <h2>Most Watched</h2>
-        <div className="SubCard">
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            slidesPerGroup={3}
-            loop={true}
-            loopFillGroupWithBlank={false}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={false}
-            className="mySwiper"
-          >
-            {data &&
-              data.map((item: any) => {
-                return (
-                  <SwiperSlide key={item.id}>
-                    <SubCardVideo CardData={item} titleName={router.pathname} />
-                  </SwiperSlide>
-                );
-              })}
-          </Swiper>
+          <div className="MainCard">
+            <MainCardVideo CardData={data[0]} titleName={title} />
+            <MainCardVideo CardData={data[1]} titleName={title} />
+          </div>
+          <h2>Video List</h2>
+          <div className="SubCard">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={10}
+              slidesPerGroup={3}
+              loop={true}
+              loopFillGroupWithBlank={false}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={false}
+              className="mySwiper"
+            >
+              {data &&
+                data.map((item: any) => {
+                  return (
+                    <SwiperSlide key={item.id}>
+                      <SubCardVideo CardData={item} titleName={router.pathname} />
+                    </SwiperSlide>
+                  );
+                })}
+            </Swiper>
+          </div>
         </div>
       </PC>
       <Mobile>

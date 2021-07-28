@@ -7,7 +7,7 @@ export const FullVideo = styled.section`
   transform: translate(-50%, -50%);
   width: 70%;
   height: 70%;
-  border: 1rem solid #d45ad8;
+  border: 1rem solid #8e37d7;
   iframe {
     position: absolute;
     top: 0;

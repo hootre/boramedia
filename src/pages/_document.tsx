@@ -40,7 +40,7 @@ class MyDocument extends Document<Props> {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css"
           />
-          <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

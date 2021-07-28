@@ -2,7 +2,6 @@ import { AppProps } from 'next/app';
 import AppLayout from 'src/layouts/AppLayout';
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '@theme/theme';
-import wrapper from 'src/module/configureStore';
 import Head from 'next/head';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const theme = true ? { mode: light } : { mode: dark };
@@ -25,4 +24,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default wrapper.withRedux(MyApp);
+export default MyApp;
