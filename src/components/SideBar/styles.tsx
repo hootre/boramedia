@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const MainSideMenu = styled.div`
-  height: 100%;
+  height: max-content;
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -9,12 +12,13 @@ export const MainSideMenu = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   padding: 3rem;
+  font-family: 'ONE-Mobile-Title';
   /* box-shadow: 10px 0 0 #d45ad8; */
   > .logo {
-    height: 40rem;
+    height: 30rem;
     img {
-      width: 18rem;
-      height: 18rem;
+      width: 20rem;
+      height: 20rem;
       position: relative;
       top: 50%;
       left: 50%;
@@ -48,25 +52,21 @@ export const NavItem = styled.div`
       margin-top: 2.6rem;
     }
     a {
-      width: 20rem;
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
+      width: 15rem;
+      font-size: 2rem;
+      color: #000;
       cursor: pointer;
       height: 55px;
+      /* border-left: 10px solid rgba(116, 79, 168, 0.75);
+      border-right: 10px solid rgba(116, 79, 168, 0.75); */
       line-height: 55px;
+      background-color: rgba(255, 255, 255, 0.5);
       text-align: center;
-      border: none;
       background-size: 300% 100%;
-
-      border-radius: 50px;
       moz-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out;
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
-
-      background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
-      box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
     }
 
     a:hover {

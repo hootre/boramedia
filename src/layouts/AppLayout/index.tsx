@@ -6,11 +6,11 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-  background-color: rgb(255 255 255 / 70%);
-  height: 90%;
+  background-color: rgb(0 0 0 / 80%);
+  height: 100%;
   display: flex;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
@@ -24,6 +24,14 @@ export const MainContainer = styled.div`
     height: 100%;
     border-radius: 0;
   }
+  .BackImg {
+    position: absolute;
+    top: -60%;
+    left: -70%;
+    width: 119%;
+    filter: blur(5px);
+    opacity: 30%;
+  }
 `;
 
 const AppLayout: FC<{}> = ({ children }) => {
@@ -31,6 +39,7 @@ const AppLayout: FC<{}> = ({ children }) => {
     <>
       <PC>
         <MainContainer>
+          <img src="/보라미디어-로고-벡터.png" alt="Logo" className="BackImg" />
           <SideBar />
           {children}
           <GlobalStyles />

@@ -10,7 +10,7 @@ const SideBar = () => {
       <div className="logo">
         <Link href="/">
           <a>
-            <img src="/보라미디어-로고-컬러백.png" alt="Logo" />
+            <img src="/보라미디어-로고-벡터.png" alt="Logo" />
           </a>
         </Link>
       </div>

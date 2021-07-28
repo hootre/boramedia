@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const SubCardBox = styled.div`
   position: relative;
-  background: rgba(118, 75, 162, 0.5);
+  background: #313131;
   border-radius: 20px;
+  color: #fff;
   overflow: hidden;
   transition: 0.4s;
   margin: 1rem;
   height: 100%;
+  box-shadow: 0 4px 20px 0 rgba(116, 79, 168, 0.75);
   &:hover {
     .wrapper {
       > img {
@@ -68,7 +70,6 @@ export const SubCardBox = styled.div`
     font-size: 1.6rem;
     font-weight: bold;
     overflow: hidden;
-    width: 28rem;
     height: 3.5rem;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -84,7 +85,6 @@ export const SubCardBox = styled.div`
     }
   }
   .name {
-    color: #fff;
     font-size: 1.6rem;
     padding: 1.2rem 1.2rem 0;
     overflow: hidden;

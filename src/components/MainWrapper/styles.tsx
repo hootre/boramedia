@@ -3,20 +3,19 @@ import styled from 'styled-components';
 export const WrapperContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 3rem 3rem 0;
+  padding: 0 7rem 3rem 0;
   flex-grow: 1;
   overflow: auto;
-  /* border: 1rem solid #d45ad8; */
   .contentContainer {
     position: relative;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
   }
   h1 {
     font-size: 3rem;
     color: #fff;
     font-weight: 700;
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     top: 0;
     left: 0;
@@ -49,6 +48,6 @@ export const WrapperContainer = styled.div`
     background-position: center;
     background-size: cover;
     width: 20rem;
-    height: 30rem;
+    height: 40rem;
   }
 `;

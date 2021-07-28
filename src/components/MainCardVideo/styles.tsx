@@ -13,24 +13,19 @@ export const MainCardBox = styled.div`
   transition: background 0.3s;
   background-repeat: no-repeat;
   cursor: pointer;
-  .time {
-    position: absolute;
-    background: rgba(21, 13, 13, 0.44);
-    color: rgba(255, 255, 255, 0.85);
-    padding: 0.3rem 0.8rem;
-    font-size: 1.2rem;
-    border-radius: 6px;
-    top: 1rem;
-    height: 2rem;
-    z-index: 1;
-    right: 8px;
-  }
+  box-shadow: 0 4px 20px 0 rgba(116, 79, 168, 0.75);
   &:hover {
     > img {
       transform: scale(1.2);
     }
+    .title {
+      opacity: 1;
+    }
+    .main {
+      opacity: 1;
+    }
     .blackBox {
-      background-color: rgba(21, 13, 13, 0);
+      background-color: rgba(21, 13, 13, 0.24);
     }
   }
   .blackBox {
@@ -39,7 +34,7 @@ export const MainCardBox = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(21, 13, 13, 0.24);
+    background-color: rgba(21, 13, 13, 0);
     z-index: 5;
   }
   > img {
@@ -62,17 +57,7 @@ export const MainCardBox = styled.div`
     position: absolute;
     left: 6%;
     top: 10%;
-  }
-
-  .time {
-    background: rgba(21, 13, 13, 0.44);
-    color: #fff;
-    padding: 3px 8px;
-    font-size: 1.2rem;
-    border-radius: 6px;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+    opacity: 0;
   }
 `;
 
@@ -81,6 +66,7 @@ export const Author = styled.div`
   align-items: center;
   padding-bottom: 10px;
   z-index: 10;
+  opacity: 0;
   &.main {
     position: absolute;
     left: 5%;
