@@ -45,7 +45,7 @@ const VideoDetailText = styled.div`
 const VideoDetailBox = styled.div`
   display: flex;
   width: 100%;
-  padding-bottom: 3rem;
+  padding-bottom: 7rem;
   padding-left: 3rem;
   .video_box {
     width: 65%;

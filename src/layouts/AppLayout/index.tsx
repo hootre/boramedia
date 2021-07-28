@@ -11,7 +11,6 @@ export const MainContainer = styled.div`
   display: flex;
   overflow: hidden;
   width: 100%;
-  border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
   position: relative;
@@ -26,11 +25,22 @@ export const MainContainer = styled.div`
   }
   .BackImg {
     position: absolute;
-    top: -60%;
-    left: -70%;
-    width: 119%;
+    top: -80%;
+    left: -90%;
+    width: 159%;
     filter: blur(5px);
     opacity: 30%;
+  }
+  .bottomText {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    h2 {
+      padding: 0 5rem;
+      color: #fff;
+    }
   }
 `;
 
@@ -43,6 +53,11 @@ const AppLayout: FC<{}> = ({ children }) => {
           <SideBar />
           {children}
           <GlobalStyles />
+          <div className="bottomText">
+            <h2>Phone | 010-2166-1895</h2>
+            <h2>Email | artinsky@boramedia.co.kr</h2>
+            <h2>©2018 by boramedia</h2>
+          </div>
         </MainContainer>
       </PC>
       <Mobile>

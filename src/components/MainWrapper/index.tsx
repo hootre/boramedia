@@ -33,7 +33,7 @@ const MainWrapper: VFC<Props> = ({ data }) => {
               slidesPerView={3}
               spaceBetween={10}
               slidesPerGroup={3}
-              loop={true}
+              loop={false}
               loopFillGroupWithBlank={false}
               pagination={{
                 clickable: true,

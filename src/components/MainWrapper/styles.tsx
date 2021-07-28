@@ -8,7 +8,7 @@ export const WrapperContainer = styled.div`
   overflow: auto;
   .contentContainer {
     position: relative;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
   }
   h1 {

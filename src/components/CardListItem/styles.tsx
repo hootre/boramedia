@@ -32,7 +32,7 @@ export const CardListItemBox = styled.div`
     width: 202px;
     height: 72px;
     .name {
-      color: #2e2e2e;
+      color: #fff;
       font-size: 14px;
       line-height: 1.3em;
       display: -webkit-box;

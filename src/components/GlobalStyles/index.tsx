@@ -81,8 +81,13 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 0px;
     }
   }
-    
-    
+    .swiper-pagination-bullet{
+        background: #fff;
+    }
+    .swiper-pagination-bullet-active{
+        width: 95px;
+    border-radius: 15px;
+    }
 
     
     

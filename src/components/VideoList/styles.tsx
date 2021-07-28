@@ -10,7 +10,7 @@ export const VideoListBox = styled.div`
   cursor: pointer;
 
   .title {
-    color: #222;
+    color: #fff;
     font-size: 18px;
   }
   @media (max-width: 1200px) {

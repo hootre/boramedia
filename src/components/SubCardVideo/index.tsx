@@ -33,17 +33,17 @@ const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
   return (
     <Link href={`${titleName}/${CardData.id}`}>
       <SubCardBox>
+        <img
+          src={
+            CardData.snippet.thumbnails.maxres
+              ? CardData.snippet.thumbnails.maxres.url
+              : CardData.snippet.thumbnails.standard
+              ? CardData.snippet.thumbnails.standard.url
+              : CardData.snippet.thumbnails.high.url
+          }
+          alt="thumbnails"
+        />
         <div className="wrapper">
-          <img
-            src={
-              CardData.snippet.thumbnails.maxres
-                ? CardData.snippet.thumbnails.maxres.url
-                : CardData.snippet.thumbnails.standard
-                ? CardData.snippet.thumbnails.standard.url
-                : CardData.snippet.thumbnails.high.url
-            }
-            alt="thumbnails"
-          />
           <Author className="author">
             <div className="img">
               <svg
@@ -60,10 +60,12 @@ const SubCardVideo: VFC<Props> = ({ CardData, titleName }) => {
               <img src="https://yt3.ggpht.com/ytc/AAUvwngS5-09zaSrCJLnXd-neDFYwdJACaShRyp9ubzcNA=s88-c-k-c0x00ffffff-no-rj"></img>
             </div>
           </Author>
+          <div className="contentBox">
+            <div className="maker">{CardData.snippet.channelTitle}</div>
+            <div className="name">{CardData.snippet.title}</div>
+            <div className="view">{CardData.snippet.publishedAt.substring(0, 10)}</div>
+          </div>
         </div>
-        <div className="maker">{CardData.snippet.channelTitle}</div>
-        <div className="name">{CardData.snippet.title}</div>
-        <div className="view">{CardData.snippet.publishedAt.substring(0, 10)}</div>
       </SubCardBox>
     </Link>
   );

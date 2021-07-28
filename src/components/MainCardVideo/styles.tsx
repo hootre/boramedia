@@ -10,14 +10,13 @@ export const MainCardBox = styled.div`
   align-self: stretch;
   overflow: hidden;
   position: relative;
-  transition: background 0.3s;
+  transition: all 0.4s ease-in-out;
   background-repeat: no-repeat;
   cursor: pointer;
-  box-shadow: 0 4px 20px 0 rgba(116, 79, 168, 0.75);
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.75);
   &:hover {
-    > img {
-      transform: scale(1.2);
-    }
+    transform: translateY(-5px);
+
     .title {
       opacity: 1;
     }
@@ -44,7 +43,6 @@ export const MainCardBox = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.4s;
   }
   .title {
     font-size: 2.5rem;
@@ -58,6 +56,7 @@ export const MainCardBox = styled.div`
     left: 6%;
     top: 10%;
     opacity: 0;
+    transition: all 0.4s ease-in-out;
   }
 `;
 
@@ -67,6 +66,7 @@ export const Author = styled.div`
   padding-bottom: 10px;
   z-index: 10;
   opacity: 0;
+  transition: all 0.4s ease-in-out;
   &.main {
     position: absolute;
     left: 5%;

@@ -2,77 +2,68 @@ import styled from 'styled-components';
 
 export const SubCardBox = styled.div`
   position: relative;
-  background: #313131;
   border-radius: 20px;
   color: #fff;
   overflow: hidden;
   transition: 0.4s;
   margin: 1rem;
   height: 100%;
-  box-shadow: 0 4px 20px 0 rgba(116, 79, 168, 0.75);
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+  }
   &:hover {
     .wrapper {
-      > img {
-        transform: scale(1.3);
-      }
-      .author {
-        bottom: -65px;
-        transform: scale(0.7);
-        right: -3px;
-        z-index: 10;
-      }
+      opacity: 1;
+      background: rgba(49, 49, 49, 0.5);
     }
-    .maker {
-      opacity: 0;
-    }
+
+    transform: translateY(-5px);
   }
 
-  .time {
-    position: absolute;
-    background: rgba(21, 13, 13, 0.44);
-    color: rgba(255, 255, 255, 0.85);
-    padding: 3px 8px;
-    font-size: 1.2rem;
-    border-radius: 6px;
-    top: 10px;
-    z-index: 1;
-    right: 8px;
-  }
   .wrapper {
     position: relative;
-    height: 65%;
-    > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.4s;
-    }
+    height: 50%;
+    background: #313131;
+    top: 70%;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
     .author {
       position: absolute;
       right: 10px;
       transition: 0.4s;
-      bottom: -25px;
+      top: 10%;
+      opacity: 1;
       svg {
         background-color: #0aa0f7;
         color: #fff;
         border-color: var(--video-bg);
       }
     }
+    .contentBox {
+      position: absolute;
+      top: 10%;
+    }
   }
+
   .maker {
     transition: 0.3s;
-    padding: 1.2rem 1.2rem 0;
+    padding: 1.2rem 2.2rem 0;
     display: inline-flex;
-    position: relative;
     font-size: 1.6rem;
     font-weight: bold;
     overflow: hidden;
     height: 3.5rem;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    position: relative;
     &:after {
       content: '';
       background-color: #22b07d;
@@ -86,7 +77,7 @@ export const SubCardBox = styled.div`
   }
   .name {
     font-size: 1.6rem;
-    padding: 1.2rem 1.2rem 0;
+    padding: 1.2rem 2.2rem 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -98,7 +89,7 @@ export const SubCardBox = styled.div`
 
   .view {
     font-size: 1.5rem;
-    padding: 0 1.2rem 0;
+    padding: 0 2.2rem 0;
     position: relative;
   }
   @media (max-width: 1200px) {

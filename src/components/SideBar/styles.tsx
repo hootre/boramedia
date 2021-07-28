@@ -42,11 +42,19 @@ export const NavItem = styled.div`
     text-decoration: none;
     font-size: 2rem;
     cursor: pointer;
+    &.active a {
+      background: #000;
+      color: #fff;
+    }
     &:hover {
       animation-name: wobble-horizontal;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;
+      a {
+        background: #000;
+        color: #fff;
+      }
     }
     & + li {
       margin-top: 2.6rem;
@@ -57,6 +65,7 @@ export const NavItem = styled.div`
       color: #000;
       cursor: pointer;
       height: 55px;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
       /* border-left: 10px solid rgba(116, 79, 168, 0.75);
       border-right: 10px solid rgba(116, 79, 168, 0.75); */
       line-height: 55px;
