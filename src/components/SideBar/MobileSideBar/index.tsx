@@ -32,6 +32,11 @@ const MobileSideBar = () => {
             <Link href="/Sketch">스케치/메이킹</Link>
             <Link href="/Advertising">광고</Link>
           </div>
+          <div className="sideBottomText">
+            <h2>Phone | 010-2166-1895</h2>
+            <h2>Email | artinsky@boramedia.co.kr</h2>
+            <h2>©2018 by boramedia</h2>
+          </div>
         </div>
       </div>
     </MobileMenu>

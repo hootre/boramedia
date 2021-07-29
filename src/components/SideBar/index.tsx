@@ -1,4 +1,4 @@
-import { MainSideMenu, NavItem } from '@components/SideBar/styles';
+import { LogoBox, MainSideMenu, NavItem } from '@components/SideBar/styles';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { memo } from 'react';
@@ -7,13 +7,11 @@ const SideBar = () => {
   const title = router.pathname.split('/')[1];
   return (
     <MainSideMenu>
-      <div className="logo">
+      <LogoBox className="logo">
         <Link href="/">
-          <a>
-            <img src="/보라미디어-로고-벡터.png" alt="Logo" />
-          </a>
+          <a></a>
         </Link>
-      </div>
+      </LogoBox>
       <NavItem>
         <ul>
           <li className={title == '' ? 'active' : ''}>

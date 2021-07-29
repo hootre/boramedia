@@ -17,12 +17,6 @@ export const MainContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
   .BackImg {
     position: absolute;
     top: -80%;
@@ -41,6 +35,11 @@ export const MainContainer = styled.div`
       padding: 0 5rem;
       color: #fff;
     }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 `;
 

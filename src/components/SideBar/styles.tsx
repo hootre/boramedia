@@ -14,20 +14,68 @@ export const MainSideMenu = styled.div`
   padding: 3rem;
   font-family: 'ONE-Mobile-Title';
   /* box-shadow: 10px 0 0 #d45ad8; */
-  > .logo {
-    height: 30rem;
-    img {
-      width: 20rem;
-      height: 20rem;
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
+`;
+export const LogoBox = styled.div`
+  height: 30rem;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  a {
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('/보라미디어-로고-벡터.png') no-repeat 50% / 70% rgba(255, 255, 2555, 0);
+    color: #d45ad8;
+    box-shadow: inset 0 0 0 1px rgba(212, 90, 216, 0.5);
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      box-shadow: inset 0 0 0 2px;
+      animation: clipMe 8s linear infinite;
+      box-sizing: border-box;
+    }
+
+    &::before {
+      animation-delay: 8s * -0.5;
+    }
+    @keyframes clipMe {
+      0%,
+      100% {
+        clip: rect(0px, 200px * (1 + 0.05 * 2), 2px, 0px);
+      }
+      25% {
+        clip: rect(0px, 2px, 200px * (1 + 0.05 * 2), 0px);
+      }
+      50% {
+        clip: rect(
+          200px * (1 + 0.05 * 2) - 2px,
+          200px * (1 + 0.05 * 2),
+          200px * (1 + 0.05 * 2),
+          0px
+        );
+      }
+      75% {
+        clip: rect(
+          0px,
+          200px * (1 + 0.05 * 2),
+          200px * (1 + 0.05 * 2),
+          200px * (1 + 0.05 * 2) - 2px
+        );
+      }
     }
   }
 `;
-
 export const NavItem = styled.div`
   display: flex;
   flex-direction: column;

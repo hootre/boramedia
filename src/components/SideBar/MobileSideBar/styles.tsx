@@ -73,6 +73,18 @@ export const MobileMenu = styled.div`
     z-index: 9999;
     background: #fff;
     transform: translateX(-100%);
+    .sideBottomText {
+      position: absolute;
+      bottom: 3%;
+      left: 55%;
+      width: 100%;
+      transform: translateX(-50%);
+      h2 {
+        padding: 1rem 0;
+        display: block;
+        color: #000;
+      }
+    }
   }
 
   .sidebar.active .sidebar-content {
