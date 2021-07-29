@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const WrapperContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 7rem 3rem 0;
+  padding: 0px 30px 30px 30px;
   flex-grow: 1;
   overflow: auto;
   .contentContainer {

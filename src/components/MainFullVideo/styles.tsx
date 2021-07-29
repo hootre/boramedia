@@ -16,4 +16,7 @@ export const FullVideo = styled.section`
     height: 100%;
   }
   cursor: none;
+  @media all and (max-width: 767px) {
+    left: 50%;
+  }
 `;
