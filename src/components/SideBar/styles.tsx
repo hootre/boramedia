@@ -17,11 +17,6 @@ export const MainSideMenu = styled.div`
 `;
 export const LogoBox = styled.div`
   height: 30rem;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   a {
     display: inline-block;
     width: 20rem;
@@ -35,9 +30,13 @@ export const LogoBox = styled.div`
     box-shadow: inset 0 0 0 1px rgba(212, 90, 216, 0.5);
     &::before,
     &::after {
+      display: inline-block;
       position: absolute;
       top: 0;
+      color: #d45ad8;
       bottom: 0;
+      z-index: -1;
+      margin: -5%;
       left: 0;
       right: 0;
       content: '';
@@ -47,32 +46,24 @@ export const LogoBox = styled.div`
     }
 
     &::before {
-      animation-delay: 8s * -0.5;
+      animation-delay: 4s;
     }
-    @keyframes clipMe {
-      0%,
-      100% {
-        clip: rect(0px, 200px * (1 + 0.05 * 2), 2px, 0px);
-      }
-      25% {
-        clip: rect(0px, 2px, 200px * (1 + 0.05 * 2), 0px);
-      }
-      50% {
-        clip: rect(
-          200px * (1 + 0.05 * 2) - 2px,
-          200px * (1 + 0.05 * 2),
-          200px * (1 + 0.05 * 2),
-          0px
-        );
-      }
-      75% {
-        clip: rect(
-          0px,
-          200px * (1 + 0.05 * 2),
-          200px * (1 + 0.05 * 2),
-          200px * (1 + 0.05 * 2) - 2px
-        );
-      }
+  }
+  @keyframes clipMe {
+    0% {
+      clip: rect(0px, 220px, 2px, 0px);
+    }
+    25% {
+      clip: rect(0px, 2px, 220px, 0px);
+    }
+    50% {
+      clip: rect(218px, 220px, 220px, 0px);
+    }
+    75% {
+      clip: rect(0px, 220px, 220px, 218px);
+    }
+    100% {
+      clip: rect(0px, 220px, 2px, 0px);
     }
   }
 `;
