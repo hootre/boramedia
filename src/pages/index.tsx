@@ -1,7 +1,6 @@
 import { VFC } from 'react';
 import Axios from 'axios';
 import MainFullVideo from '@components/MainFullVideo';
-import Head from 'next/head';
 import { GetStaticProps } from 'next';
 interface Props {
   data_detail: any;

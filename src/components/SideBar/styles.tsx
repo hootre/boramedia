@@ -51,19 +51,19 @@ export const LogoBox = styled.div`
   }
   @keyframes clipMe {
     0% {
-      clip: rect(0px, 220px, 2px, 0px);
+      clip: rect(0px, 22rem, 0.2rem, 0px);
     }
     25% {
-      clip: rect(0px, 2px, 220px, 0px);
+      clip: rect(0px, 0.2rem, 22rem, 0px);
     }
     50% {
-      clip: rect(218px, 220px, 220px, 0px);
+      clip: rect(21.8rem, 22rem, 22rem, 0px);
     }
     75% {
-      clip: rect(0px, 220px, 220px, 218px);
+      clip: rect(0px, 22rem, 22rem, 21.8rem);
     }
     100% {
-      clip: rect(0px, 220px, 2px, 0px);
+      clip: rect(0px, 22rem, 0.2rem, 0px);
     }
   }
 `;
