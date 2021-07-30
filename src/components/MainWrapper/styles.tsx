@@ -39,15 +39,34 @@ export const WrapperContainer = styled.div`
     width: 100%;
     height: 50%;
   }
-  .swiper-container {
+  .SubCard .swiper-container {
     width: 100%;
     padding-bottom: 5rem;
   }
 
-  .swiper-slide {
+  .SubCard .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 20rem;
     height: 40rem;
+  }
+
+  .mySwiper {
+    margin-top: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    overflow: initial;
+    border-bottom: 5px solid #808191;
+    a {
+      display: inline-block;
+      &:hover {
+        color: #808191;
+      }
+    }
+  }
+  .active a {
+    font-weight: bold;
+    color: #fff;
   }
 `;

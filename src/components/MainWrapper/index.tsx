@@ -10,6 +10,7 @@ import 'swiper/components/navigation/navigation.min.css';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper/core';
 import { useRouter } from 'next/dist/client/router';
 import { PC, Mobile } from '@utils/MediaQuery';
+import Link from 'next/link';
 SwiperCore.use([EffectCoverflow, Pagination]);
 interface Props {
   data: any;
@@ -54,6 +55,26 @@ const MainWrapper: VFC<Props> = ({ data }) => {
         </div>
       </PC>
       <Mobile>
+        <Swiper className="mySwiper" slidesPerView={3}>
+          <SwiperSlide key="0" className={title == '' ? 'active' : ''}>
+            <Link href="/">메인</Link>
+          </SwiperSlide>
+          <SwiperSlide key="1" className={title == 'MusicVideo' ? 'active' : ''}>
+            <Link href="/MusicVideo">뮤직비디오</Link>
+          </SwiperSlide>
+          <SwiperSlide key="2" className={title === 'Promotion' ? 'active' : ''}>
+            <Link href="/Promotion">제작영상</Link>
+          </SwiperSlide>
+          <SwiperSlide key="3" className={title === 'Interview' ? 'active' : ''}>
+            <Link href="/Interview">배우 프로필</Link>
+          </SwiperSlide>
+          <SwiperSlide key="4" className={title === 'Sketch' ? 'active' : ''}>
+            <Link href="/Sketch">스케치/메이킹</Link>
+          </SwiperSlide>
+          <SwiperSlide key="5" className={router.pathname === '/Advertising' ? 'active' : ''}>
+            <Link href="/Advertising">광고</Link>
+          </SwiperSlide>
+        </Swiper>
         <VideoList titleName={title ? title : '뮤직비디오'} list={data} />
       </Mobile>
     </WrapperContainer>

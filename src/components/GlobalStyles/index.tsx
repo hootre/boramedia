@@ -21,6 +21,12 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     }
+    @font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
     html{
         font-size: 10px;
     }
@@ -32,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/이상한질감.jpg');
+            background-image: url('/보라미디어-로고-배너_홈페이지.png');
             background-size: cover;
             opacity: 0.4;
             content: "";

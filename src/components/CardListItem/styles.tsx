@@ -3,7 +3,10 @@ import styled from 'styled-components';
 export const CardListItemBox = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 26px;
+
+  & + & {
+    margin-top: 26px;
+  }
   position: relative;
   .imgBox {
     position: relative;

@@ -5,10 +5,10 @@ import { GetStaticProps } from 'next';
 interface Props {
   data_detail: any;
 }
-const Home: VFC<Props> = ({ data_detail }) => {
+const Home: VFC<Props> = () => {
   return (
     <>
-      <MainFullVideo data_detail={data_detail} />
+      <MainFullVideo />
     </>
   );
 };

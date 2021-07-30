@@ -2,8 +2,6 @@ import { Author } from '@components/MainCardVideo/styles';
 import VideoList from '@components/VideoList';
 import React, { useCallback, useState, VFC } from 'react';
 import { VideoDetailBox, VideoDetailText } from './styles';
-
-import { Tablet } from '@utils/MediaQuery';
 interface Props {
   titleName: string;
   data_detail: {
@@ -35,7 +33,7 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
             src={`https://www.youtube.com/embed/${data_detail.id}`}
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay=1; rel=0; amp; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
@@ -61,7 +59,6 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
               </div>
               <div className="detail">
                 <div className="name">{data_detail.snippet.channelTitle}</div>
-                <div className="info">{data_detail.snippet.publishedAt.substring(0, 10)}</div>
               </div>
             </Author>
           </div>
@@ -74,7 +71,6 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
         </VideoDetailText>
       </div>
       <VideoList titleName={titleName} list={list} />
-      <Tablet></Tablet>
     </VideoDetailBox>
   );
 };

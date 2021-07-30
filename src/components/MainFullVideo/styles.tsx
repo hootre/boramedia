@@ -2,18 +2,19 @@ import styled from 'styled-components';
 
 export const FullVideo = styled.section`
   position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
-  box-shadow: 0 4px 20px 0 rgba(116, 79, 168, 0.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
   iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    cursor: none;
+    pointer-events: none;
   }
   cursor: none;
   @media all and (max-width: 767px) {
@@ -31,14 +32,15 @@ export const MobileLogoBox = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     background: url('/보라미디어-로고-벡터.png') no-repeat 50% / 70% rgba(255, 255, 2555, 0);
-    color: #d45ad8;
-    box-shadow: inset 0 0 0 1px rgba(212, 90, 216, 0.5);
+    color: #673895;
+    box-shadow: inset 0 0 0 1px #673895;
+    border-radius: 50%;
     &::before,
     &::after {
       display: inline-block;
       position: absolute;
       top: 0;
-      color: #d45ad8;
+      color: #673895;
       bottom: 0;
       z-index: -1;
       margin: -5%;
@@ -47,6 +49,7 @@ export const MobileLogoBox = styled.div`
       content: '';
       box-shadow: inset 0 0 0 2px;
       box-sizing: border-box;
+      border-radius: 50%;
     }
     &::after {
       clip: rect(0px, 22rem, 0.2rem, 0px);

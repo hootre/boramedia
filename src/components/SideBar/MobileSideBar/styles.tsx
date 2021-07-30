@@ -112,20 +112,20 @@ export const MobileMenu = styled.div`
     margin-bottom: 50px;
   }
 
-  .sidebar .sidebar-content .nav-left > a {
-    color: #333;
-    display: block;
-    font-size: 16px;
-    padding: 10px 0;
-    line-height: 24px;
-    vertical-align: top;
-    text-decoration: none;
-  }
+  .sidebar .sidebar-content .nav-left li {
+    a {
+      color: #333;
+      display: block;
+      font-size: 16px;
+      padding: 10px 0;
+      line-height: 24px;
+      vertical-align: top;
+      text-decoration: none;
+    }
 
-  .sidebar .sidebar-content .nav-left > a > span {
-    color: #aaa;
-    font-size: 24px;
-    min-width: 40px;
-    display: inline-block;
+    &.active a {
+      color: #000;
+      font-weight: bold;
+    }
   }
 `;

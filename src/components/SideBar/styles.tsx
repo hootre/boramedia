@@ -25,9 +25,10 @@ export const LogoBox = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url('/보라미디어-로고-벡터.png') no-repeat 50% / 70% rgba(255, 255, 2555, 0);
-    color: #d45ad8;
-    box-shadow: inset 0 0 0 1px rgba(212, 90, 216, 0.5);
+    background: url('/보라미디어 로고 PNG@4x.png') no-repeat 50% / 70% rgba(255, 255, 2555, 0);
+    color: #7a44b1;
+    box-shadow: inset 0 0 0 1px #442a5e;
+    border-radius: 50%;
     &::before,
     &::after {
       display: inline-block;
@@ -41,6 +42,7 @@ export const LogoBox = styled.div`
       content: '';
       box-shadow: inset 0 0 0 2px;
       box-sizing: border-box;
+      border-radius: 50%;
     }
     &::after {
       clip: rect(0px, 22rem, 0.2rem, 0px);
@@ -79,10 +81,10 @@ export const LogoBox = styled.div`
       clip: rect(0px, 22rem, 0.2rem, 0px);
     }
     75% {
-      clip: rect(0px, 22rem, 0.2rem, 0px);
+      clip: rect(0px, 0.2rem, 22rem, 0px);
     }
     100% {
-      clip: rect(0px, 0.2rem, 22rem, 0px);
+      clip: rect(21.8rem, 22rem, 22rem, 0px);
     }
   }
 `;

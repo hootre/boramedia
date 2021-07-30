@@ -7,10 +7,20 @@ const VideoDetailText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 10px;
+  padding-left: 15px;
   border-bottom: 1px solid #888;
   width: 100%;
   position: relative;
+  .author {
+    > div {
+      opacity: 1;
+      padding-top: 1rem;
+      .name {
+        font-size: 3rem;
+      }
+    }
+  }
   .title {
     font-size: 3rem;
     color: #fff;
@@ -47,9 +57,9 @@ const VideoDetailBox = styled.div`
   width: 100%;
   padding-bottom: 7rem;
   padding-left: 3rem;
+  padding-top: 14rem;
   .video_box {
     width: 65%;
-    margin-top: 16rem;
     overflow: auto;
     -o-object-fit: cover;
     object-fit: cover;

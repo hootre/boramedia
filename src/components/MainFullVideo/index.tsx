@@ -4,13 +4,8 @@ import ReactPlayer from 'react-player';
 import { PC, Mobile } from '@utils/MediaQuery';
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
-interface Props {
-  data_detail: {
-    id: string;
-  };
-}
 
-const MainFullVideo: VFC<Props> = ({ data_detail }) => {
+const MainFullVideo: VFC = () => {
   const router = useRouter();
   const title = router.pathname.split('/')[1];
   return (
@@ -19,9 +14,10 @@ const MainFullVideo: VFC<Props> = ({ data_detail }) => {
         <FullVideo>
           <ReactPlayer
             className="react-player"
-            url={'https://www.youtube.com/watch?v=' + data_detail.id}
+            url={'https://www.youtube.com/watch?v=T23XQ8L2UK8'}
             playing
             loop
+            muted
             width="100%"
             height="100%"
           />

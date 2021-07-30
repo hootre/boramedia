@@ -8,7 +8,6 @@ interface Props {
 const VideoList: VFC<Props> = memo(({ titleName, list }) => {
   return (
     <VideoListBox>
-      <div className="title">{titleName} Videos</div>
       {list &&
         list.map((item: any, index: number) => {
           return <CardListItem key={item.id} CardData={item} />;

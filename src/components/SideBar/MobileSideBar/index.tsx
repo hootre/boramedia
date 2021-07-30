@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
 import { MobileMenu } from './styles';
@@ -7,6 +8,9 @@ const MobileSideBar = () => {
   const onMenuClick = useCallback(() => {
     setMenuToggle((prev) => !prev);
   }, [menuToggle]);
+
+  const router = useRouter();
+  const title = router.pathname.split('/')[1];
   return (
     <MobileMenu className={`screen `}>
       <div className="header">
@@ -24,14 +28,28 @@ const MobileSideBar = () => {
             <div className="name">Bora Media</div>
             <div className="email">artinsky@boramedia.co.kr</div>
           </div>
-          <div className="nav-left">
-            <Link href="/">메인</Link>
-            <Link href="/MusicVideo">뮤직비디오</Link>
-            <Link href="/Promotion">제작영상</Link>
-            <Link href="/Interview">배우 프로필</Link>
-            <Link href="/Sketch">스케치/메이킹</Link>
-            <Link href="/Advertising">광고</Link>
-          </div>
+          <ul className="nav-left">
+            <li className={title == '' ? 'active' : ''}>
+              <Link href="/">메인</Link>
+            </li>
+            <li className={title == 'MusicVideo' ? 'active' : ''}>
+              <Link href="/MusicVideo">뮤직비디오</Link>
+            </li>
+            <li className={title === 'Promotion' ? 'active' : ''}>
+              <Link href="/Promotion">제작영상</Link>
+            </li>
+            <li className={title === 'Interview' ? 'active' : ''}>
+              <Link href="/Interview">배우 프로필</Link>
+            </li>
+
+            <li className={title === 'Sketch' ? 'active' : ''}>
+              <Link href="/Sketch">스케치/메이킹</Link>
+            </li>
+
+            <li className={router.pathname === '/Advertising' ? 'active' : ''}>
+              <Link href="/Advertising">광고</Link>
+            </li>
+          </ul>
           <div className="sideBottomText">
             <h2>Phone | 010-2166-1895</h2>
             <h2>Email | artinsky@boramedia.co.kr</h2>
