@@ -41,34 +41,54 @@ export const MobileLogoBox = styled.div`
       color: #d45ad8;
       bottom: 0;
       z-index: -1;
-      margin: -10%;
+      margin: -5%;
       left: 0;
       right: 0;
       content: '';
       box-shadow: inset 0 0 0 2px;
-      animation: clipMe 8s linear infinite;
       box-sizing: border-box;
     }
-
+    &::after {
+      clip: rect(0px, 22rem, 0.2rem, 0px);
+      animation: clipMeAfter 8s linear infinite;
+    }
     &::before {
-      animation-delay: 4s;
+      clip: rect(21.8rem, 22rem, 22rem, 0px);
+      animation: clipMeBefore 8s linear infinite;
     }
   }
-  @keyframes clipMe {
+  @keyframes clipMeAfter {
     0% {
-      clip: rect(0px, 120px, 1px, 0px);
+      clip: rect(0px, 22rem, 0.2rem, 0px);
     }
     25% {
-      clip: rect(0px, 1px, 120px, 0px);
+      clip: rect(0px, 0.2rem, 22rem, 0px);
     }
     50% {
-      clip: rect(116px, 120px, 120px, 0px);
+      clip: rect(21.8rem, 22rem, 22rem, 0px);
     }
     75% {
-      clip: rect(0px, 120px, 120px, 116px);
+      clip: rect(0px, 22rem, 22rem, 21.8rem);
     }
     100% {
-      clip: rect(0px, 120px, 1px, 0px);
+      clip: rect(0px, 22rem, 0.2rem, 0px);
+    }
+  }
+  @keyframes clipMeBefore {
+    0% {
+      clip: rect(21.8rem, 22rem, 22rem, 0px);
+    }
+    25% {
+      clip: rect(0px, 22rem, 22rem, 21.8rem);
+    }
+    50% {
+      clip: rect(0px, 22rem, 0.2rem, 0px);
+    }
+    75% {
+      clip: rect(0px, 22rem, 0.2rem, 0px);
+    }
+    100% {
+      clip: rect(0px, 0.2rem, 22rem, 0px);
     }
   }
 `;

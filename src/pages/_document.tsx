@@ -43,7 +43,6 @@ class MyDocument extends Document<Props> {
           />
           <meta name="description" content="Description" />
           <meta name="keywords" content="Keywords" />
-          <title>Next.js PWA Example</title>
 
           <link rel="manifest" href="/manifest.json" />
           <link href="/16x16.png" rel="icon" type="image/png" sizes="16x16" />

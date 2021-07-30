@@ -14,7 +14,7 @@ const MobileSideBar = () => {
           <i></i>
         </span>
         <Link href="/">
-          <span className="title">Home</span>
+          <img src="/가로로고@4x.png" alt="logo" className="logo" />
         </Link>
       </div>
       <div className={`sidebar ${menuToggle ? 'active' : ''}`} onClick={onMenuClick}>

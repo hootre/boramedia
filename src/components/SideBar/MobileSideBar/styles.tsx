@@ -8,16 +8,21 @@ export const MobileMenu = styled.div`
   .header {
     overflow: hidden;
     padding-top: 15px;
-    position: relative;
+    position: fixed;
+    width: 100%;
     display: flex;
     padding: 15px;
     background-color: rgba(0 0 0 / 80%);
     z-index: 3;
   }
 
-  .header > span {
-    font-size: 24px;
-    min-width: 24px;
+  .header .logo {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .header > .title {
     font-size: 16px;

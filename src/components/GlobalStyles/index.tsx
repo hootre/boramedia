@@ -70,17 +70,6 @@ const GlobalStyles = createGlobalStyle`
         background-color: rgb(21 20 26 / 63%);
         border-radius: 10px;
     }
-    @media (max-width: 768px) {
-        
-    ::-webkit-scrollbar {
-        width: 6px;
-        border-radius: 0px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background-color: #fff;
-        border-radius: 0px;
-    }
-  }
     .swiper-pagination-bullet{
         background: #fff;
     }
