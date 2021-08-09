@@ -5,8 +5,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>SEROP</title>
-        <meta name="MainPage" content="SEROP 홈페이지 입니다" />
+        <title>BORA</title>
+        <meta name="MainPage" content="BORAMEDIA 홈페이지 입니다" />
         <meta
           name="viewport"
           content="target-densitydpi=device-dpi, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width"
