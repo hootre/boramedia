@@ -1,6 +1,12 @@
 import reset from 'styled-reset';
 import styled, { createGlobalStyle } from 'styled-components';
 
+// swiper core styles
+import 'swiper/swiper.min.css';
+
+// modules styles
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
 const GlobalStyles = createGlobalStyle`
     ${reset}
     #__next {

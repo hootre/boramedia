@@ -4,7 +4,6 @@ import MobileSideBar from '@components/SideBar/MobileSideBar';
 import { PC, Mobile } from '@utils/MediaQuery';
 import React, { FC, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
-import Router from 'next/router';
 
 export const MainContainer = styled.div`
   background-color: rgb(0 0 0 / 80%);

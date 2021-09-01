@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardListItemBox = styled.div`
   display: flex;
   align-items: center;
+  text-align: left;
 
   & + & {
     margin-top: 26px;
@@ -46,6 +47,11 @@ export const CardListItemBox = styled.div`
     }
     .maker {
       margin: 6px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      transition: all 0.3s ease-in;
     }
     .info {
       font-size: 13px;

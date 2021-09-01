@@ -51,6 +51,10 @@ const VideoDetailText = styled.div`
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media (max-width: 1200px) {
+    padding-left: 0;
+  }
 `;
 const VideoDetailBox = styled.div`
   display: flex;
@@ -84,7 +88,7 @@ const VideoDetailBox = styled.div`
   @media (max-width: 1200px) {
     overflow: scroll;
     flex-direction: column;
-    padding: 100px 30px 30px 30px;
+    padding: 60px 30px 30px 30px;
     .video_box {
       width: 100%;
       padding: 0;
