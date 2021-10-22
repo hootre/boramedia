@@ -4,8 +4,8 @@ import MainFullVideo from '@components/MainFullVideo';
 import { GetStaticProps } from 'next';
 import { Mobile, PC } from '@utils/MediaQuery';
 import MobileOnePage from '@components/MobileOnePage';
-import MobileMenu from '@components/MobileMenu';
 import useYoutebeList from '@hooks/useYoutebeList';
+import OnePage from '@components/OnePage';
 interface Props {
   Advertising_list: any;
   Interview_list: any;
@@ -20,18 +20,19 @@ const Home: VFC<Props> = ({
   Promotion_list,
   Sketch_list,
 }) => {
-  const [firstSwiper, setFirstSwiper] = useState(null);
-  const [secondSwiper, setSecondSwiper] = useState(null);
   return (
     <>
       <PC>
-        <MainFullVideo />
+        <OnePage
+          Advertising_list={Advertising_list}
+          Interview_list={Interview_list}
+          MusicVideo_list={MusicVideo_list}
+          Promotion_list={Promotion_list}
+          Sketch_list={Sketch_list}
+        />
       </PC>
       <Mobile>
-        <MobileMenu secondSwiper={secondSwiper} setFirstSwiper={setFirstSwiper} />
         <MobileOnePage
-          firstSwiper={firstSwiper}
-          setSecondSwiper={setSecondSwiper}
           Advertising_list={Advertising_list}
           Interview_list={Interview_list}
           MusicVideo_list={MusicVideo_list}

@@ -61,16 +61,14 @@ const VideoDetailBox = styled.div`
   width: 100%;
   padding-bottom: 7rem;
   padding-left: 3rem;
-  padding-top: 14rem;
+  max-height: 1200px;
   .video_box {
     width: 65%;
-    overflow: auto;
     -o-object-fit: cover;
     object-fit: cover;
     transition: 0.3s;
     .video {
       border-radius: 20px;
-      overflow: hidden;
       position: relative;
       padding-bottom: 56.25%;
       height: 0;

@@ -4,6 +4,8 @@ export const VideoListBox = styled.div`
   margin-left: 3rem;
   padding-right: 3rem;
   width: 30%;
+  overflow-y: scroll;
+  max-height: 800px;
   cursor: pointer;
 
   @media (max-width: 1200px) {
