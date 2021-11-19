@@ -10,6 +10,7 @@ export const VideoListBox = styled.div`
 
   @media (max-width: 1200px) {
     margin-left: 0rem;
+    margin-top: 10rem;
     padding-right: 0rem;
     width: 100%;
     height: 100%;

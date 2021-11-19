@@ -5,19 +5,20 @@ interface DetailText {
 }
 const VideoDetailText = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   margin-top: 10px;
   padding-left: 15px;
-  border-bottom: 1px solid #888;
   width: 100%;
   position: relative;
   .author {
+    position: absolute;
+    right: 2%;
     > div {
       opacity: 1;
       padding-top: 1rem;
       .name {
-        font-size: 3rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -25,6 +26,10 @@ const VideoDetailText = styled.div`
     font-size: 3rem;
     color: #fff;
     margin: 16px 0 20px;
+      width:800px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
   }
   .subtitle {
     font-size: 1.4rem;
@@ -54,12 +59,13 @@ const VideoDetailText = styled.div`
 
   @media (max-width: 1200px) {
     padding-left: 0;
+
   }
 `;
 const VideoDetailBox = styled.div`
   display: flex;
   width: 100%;
-  padding-bottom: 7rem;
+  align-items: center;
   padding-left: 3rem;
   max-height: 1200px;
   .video_box {
@@ -92,9 +98,6 @@ const VideoDetailBox = styled.div`
       padding: 0;
       margin: 0;
       overflow: visible;
-    }
-    .title {
-      font-size: 5rem;
     }
     .subtitle {
       font-size: 2.4rem;

@@ -65,11 +65,11 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
           </div>
           <PC>
             <div className="title">{data_detail.snippet.title}</div>
-            <div className="subtitle">{data_detail.snippet.description}</div>
+            {/* <div className="subtitle">{data_detail.snippet.description}</div>
 
             <div className="viewMoreBtn" onClick={onClickViewMoreButton}>
               {viewMoreButton ? '접기' : '더 보기'}
-            </div>
+            </div> */}
           </PC>
         </VideoDetailText>
       </div>

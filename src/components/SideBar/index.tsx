@@ -14,9 +14,6 @@ const SideBar = () => {
       </LogoBox>
       <NavItem>
         <ul>
-          <li className={title == '' ? 'active' : ''}>
-            <Link href="/">메인</Link>
-          </li>
           <li className={title == 'MusicVideo' ? 'active' : ''}>
             <Link href="/MusicVideo/uKDDwDHAft8">뮤직비디오</Link>
           </li>
@@ -28,7 +25,7 @@ const SideBar = () => {
           </li>
 
           <li className={title === 'Sketch' ? 'active' : ''}>
-            <Link href="/Sketch/N_LJkcc4-h8">스케치/메이킹</Link>
+            <Link href="/Sketch/HeEpj8kBQtU">스케치/메이킹</Link>
           </li>
 
           <li className={router.pathname === '/Advertising' ? 'active' : ''}>

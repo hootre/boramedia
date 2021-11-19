@@ -29,7 +29,7 @@ export const MainContainer = styled.div`
   .bottomBack {
     position: absolute;
     width: 100%;
-    height: 85px;
+    height: 45px;
     bottom: 0;
     background: #292929;
   }
@@ -47,7 +47,6 @@ export const MainContainer = styled.div`
       font-size: 1.5rem;
       text-align: left;
       padding: 0 2rem 2rem 2rem;
-      line-height: 25px;
       color: #fff;
       opacity: 0.5;
     }
@@ -65,73 +64,73 @@ export const MainContainer = styled.div`
 `;
 
 const AppLayout: FC<{}> = ({ children }) => {
-  const onScroll = useCallback((e) => {
-    window.removeEventListener('mousewheel', onScroll);
-    let prevTop = 0;
-    let nextTop = 0;
-    // e.path.map((item: Element) => {
-    //   if (item.nodeName == 'SECTION') {
-    //     item.previousSibling?.nodeName == 'SECTION'
-    //       ? (prevTop =
-    //           window.pageYOffset + Number(item.previousSibling?.getBoundingClientRect().top))
-    //       : 0;
-    //     item.nextSibling?.nodeName == 'SECTION'
-    //       ? (nextTop = window.pageYOffset + Number(item.nextSibling?.getBoundingClientRect().top))
-    //       : 0;
-    //   }
-    // });
-    if (e.wheelDelta == 120) {
-      // downscroll code
-      console.log('아래서 위로');
-      window.scrollTo({ top: prevTop, behavior: 'smooth' });
-    } else {
-      // upscroll code
-      console.log('위에서 아래로');
-      window.scrollTo({ top: nextTop, behavior: 'smooth' });
-    }
-    setTimeout(() => {
-      window.addEventListener('mousewheel', onScroll, { passive: false });
-    }, 500);
-  }, []);
+  // const onScroll = useCallback((e) => {
+  //   window.removeEventListener('mousewheel', onScroll);
+  //   let prevTop = 0;
+  //   let nextTop = 0;
+  //   // e.path.map((item: Element) => {
+  //   //   if (item.nodeName == 'SECTION') {
+  //   //     item.previousSibling?.nodeName == 'SECTION'
+  //   //       ? (prevTop =
+  //   //           window.pageYOffset + Number(item.previousSibling?.getBoundingClientRect().top))
+  //   //       : 0;
+  //   //     item.nextSibling?.nodeName == 'SECTION'
+  //   //       ? (nextTop = window.pageYOffset + Number(item.nextSibling?.getBoundingClientRect().top))
+  //   //       : 0;
+  //   //   }
+  //   // });
+  //   if (e.wheelDelta == 120) {
+  //     // downscroll code
+  //     console.log('아래서 위로');
+  //     window.scrollTo({ top: prevTop, behavior: 'smooth' });
+  //   } else {
+  //     // upscroll code
+  //     console.log('위에서 아래로');
+  //     window.scrollTo({ top: nextTop, behavior: 'smooth' });
+  //   }
+  //   setTimeout(() => {
+  //     window.addEventListener('mousewheel', onScroll, { passive: false });
+  //   }, 500);
+  // }, []);
 
-  let startX: number, startY: number, endX: number, endY: number;
-  const onTouchStart = useCallback((e) => {
-    startX = e.touches[0].screenX;
-    startY = e.touches[0].screenY;
-  }, []);
-  const onTouchEnd = useCallback((e) => {
-    endX = e.changedTouches[0].screenX;
-    endY = e.changedTouches[0].screenY;
-    let prevTop = 0;
-    let nextTop = 0;
-    // e.path.map((item: Element) => {
-    //   if (item.nodeName == 'SECTION') {
-    //     item.previousSibling?.nodeName == 'SECTION'
-    //       ? (prevTop =
-    //           window.pageYOffset + Number(item.previousSibling?.getBoundingClientRect().top))
-    //       : 0;
-    //     item.nextSibling?.nodeName == 'SECTION'
-    //       ? (nextTop = window.pageYOffset + Number(item.nextSibling?.getBoundingClientRect().top))
-    //       : 0;
-    //   }
-    // });
-    if (startY - endY > 50) {
-      // 아래서 위로
-      console.log('아래서 위로');
-      window.scrollTo({ top: nextTop, behavior: 'smooth' });
-    } else if (endY - startY > 50) {
-      // 위에서 아래로
-      console.log('위에서 아래로');
+  // let startX: number, startY: number, endX: number, endY: number;
+  // const onTouchStart = useCallback((e) => {
+  //   startX = e.touches[0].screenX;
+  //   startY = e.touches[0].screenY;
+  // }, []);
+  // const onTouchEnd = useCallback((e) => {
+  //   endX = e.changedTouches[0].screenX;
+  //   endY = e.changedTouches[0].screenY;
+  //   let prevTop = 0;
+  //   let nextTop = 0;
+  //   // e.path.map((item: Element) => {
+  //   //   if (item.nodeName == 'SECTION') {
+  //   //     item.previousSibling?.nodeName == 'SECTION'
+  //   //       ? (prevTop =
+  //   //           window.pageYOffset + Number(item.previousSibling?.getBoundingClientRect().top))
+  //   //       : 0;
+  //   //     item.nextSibling?.nodeName == 'SECTION'
+  //   //       ? (nextTop = window.pageYOffset + Number(item.nextSibling?.getBoundingClientRect().top))
+  //   //       : 0;
+  //   //   }
+  //   // });
+  //   if (startY - endY > 50) {
+  //     // 아래서 위로
+  //     console.log('아래서 위로');
+  //     window.scrollTo({ top: nextTop, behavior: 'smooth' });
+  //   } else if (endY - startY > 50) {
+  //     // 위에서 아래로
+  //     console.log('위에서 아래로');
 
-      window.scrollTo({ top: prevTop, behavior: 'smooth' });
-    }
-  }, []);
+  //     window.scrollTo({ top: prevTop, behavior: 'smooth' });
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    window.addEventListener('mousewheel', onScroll, { passive: false });
-    // window.addEventListener('touchstart', onTouchStart, { passive: false });
-    // window.addEventListener('touchend', onTouchEnd, { passive: false });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('mousewheel', onScroll, { passive: false });
+  //   // window.addEventListener('touchstart', onTouchStart, { passive: false });
+  //   // window.addEventListener('touchend', onTouchEnd, { passive: false });
+  // }, []);
   return (
     <>
       <PC>
@@ -141,12 +140,17 @@ const AppLayout: FC<{}> = ({ children }) => {
           <GlobalStyles />
           <div className="bottomBack">
             <div className="bottomText">
-              <img src="/보라미디어 화이트로고@4x.png" alt="Logo" className="footerImg" />
               <h2>
-                보라미디어 | 사업자등록번호 : 593-56-00232 <br /> 주소 : 광진구 면목로 173
+                보라미디어 | 사업자등록번호 : 593-56-00232  
               </h2>
               <h2>
-                메일주소 : artinsky@boramedia.co.kr <br /> Phone : 010-2166-1895
+              주소 : 광진구 면목로 173
+              </h2>
+              <h2>
+                메일주소 : artinsky@boramedia.co.kr  
+              </h2>
+              <h2>
+              Phone : 010-2166-1895
               </h2>
             </div>
           </div>
