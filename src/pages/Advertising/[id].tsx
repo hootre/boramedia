@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const data = videos_res.data.items;
   const data_detail = detail_res.data.items[0];
-
+  
   return {
     props: {
       data,

@@ -66,10 +66,10 @@ const VideoDetailBox = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  padding-left: 3rem;
+  padding-left: 2rem;
   max-height: 1200px;
   .video_box {
-    width: 65%;
+    width: 70%;
     -o-object-fit: cover;
     object-fit: cover;
     transition: 0.3s;

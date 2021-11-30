@@ -32,21 +32,21 @@ const MainFullVideo: VFC = () => {
         <MobileNavItem>
           <ul>
           <li className={title == 'MusicVideo' ? 'active' : ''}>
-            <Link href="/MusicVideo/uKDDwDHAft8">뮤직비디오</Link>
+            <Link href="/MusicVideo">뮤직비디오</Link>
           </li>
           <li className={title === 'Promotion' ? 'active' : ''}>
-            <Link href="/Promotion/kkQTPHwWRU4">제작영상</Link>
+            <Link href="/Promotion">제작영상</Link>
           </li>
           <li className={title === 'Interview' ? 'active' : ''}>
-            <Link href="/Interview/JBR1MntFIaU">배우 프로필</Link>
+            <Link href="/Interview">배우 프로필</Link>
           </li>
 
           <li className={title === 'Sketch' ? 'active' : ''}>
-            <Link href="/Sketch/HeEpj8kBQtU">스케치/메이킹</Link>
+            <Link href="/Sketch">스케치/메이킹</Link>
           </li>
 
           <li className={router.pathname === '/Advertising' ? 'active' : ''}>
-            <Link href="/Advertising/BHWYFfowcno">광고</Link>
+            <Link href="/Advertising">광고</Link>
           </li>
           </ul>
         </MobileNavItem>
