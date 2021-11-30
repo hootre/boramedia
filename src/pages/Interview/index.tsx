@@ -1,55 +1,21 @@
-import MainWrapper from '@components/MainWrapper';
-import { VFC } from 'react';
-import Axios from 'axios';
-import Head from 'next/head';
-interface Props {
-  data: any;
+import { useRouter } from 'next/router'
+
+function RedirectPage({ }) {
+  const router = useRouter()
+  // Make sure we're in the browser
+  if (typeof window !== 'undefined') {
+    router.push('/');
+    return; 
+  }
 }
-const Interview: VFC<Props> = ({ data }) => {
-  return (
-    <>
-      <Head>
-        <title>SEROP | Interview</title>
-        <meta name="MainPage" content="SEROP Interview." />
-      </Head>
-      <MainWrapper data={data} />
-    </>
-  );
-};
 
-export async function getStaticProps() {
-  Axios.defaults.baseURL = 'https://www.googleapis.com/youtube/v3';
-  let params = {};
-
-  // Video List Search
-  params = {
-    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
-    part: 'snippet',
-    maxResults: 25,
-    playlistId: process.env.NEXT_PUBLIC_INTERVIEW,
-  };
-  const res = await Axios.get('/playlistItems', { params });
-
-  const videoIdList = res.data.items
-    .map((item: any) => {
-      return item.snippet.resourceId.videoId;
-    })
-    .join();
-
-  // Videos Data Search
-  params = {
-    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
-    part: 'snippet,contentDetails',
-    maxResults: 25,
-    id: videoIdList,
-  };
-  const videos_res = await Axios.get('/videos', { params });
-  const data = videos_res.data.items;
-
-  return {
-    props: {
-      data,
-    },
-  };
+RedirectPage.getInitialProps = (ctx: { res: { writeHead: (arg0: number, arg1: { Location: string; }) => void; end: () => void; }; }) => {
+  // We check for ctx.res to make sure we're on the server.
+  if (ctx.res) {
+    ctx.res.writeHead(302, { Location: '/' });
+    ctx.res.end();
+  }
+  return { };
 }
-export default Interview;
+
+export default RedirectPage

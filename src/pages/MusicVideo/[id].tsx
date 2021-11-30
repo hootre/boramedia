@@ -2,6 +2,7 @@ import VideoDetail from '@components/VideoDetail';
 import Axios from 'axios';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { useEffect, useState, VFC } from 'react';
+import Head from 'next/head';
 interface Props {
   data: any;
   data_detail: any;
@@ -13,7 +14,13 @@ const Detail: VFC<Props> = ({ data, data_detail }) => {
     var para = document.location.href.split('/');
     setTitleName(para[3]);
   }, []);
-  return <VideoDetail titleName={titleName} list={data} data_detail={data_detail} />;
+  return <>
+  <Head>
+    <title>BORAMEDIA | Musicvideo</title>
+    <meta name="MainPage" content="BORAMEDIA Musicvideo." />
+  </Head>
+  <VideoDetail titleName={titleName} list={data} data_detail={data_detail} />
+  </>;
 };
 export default React.memo(Detail);
 
