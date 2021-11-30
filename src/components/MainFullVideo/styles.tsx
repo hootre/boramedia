@@ -101,7 +101,7 @@ export const MobileNavItem = styled.div`
   color: #fff;
   z-index: 1;
   position: absolute;
-  top: 27%;
+  top: 33%;
   width: 100%;
   > ul {
     display: flex;

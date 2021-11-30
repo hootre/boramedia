@@ -64,6 +64,12 @@ export const MainContainer = styled.div`
 `;
 
 const AppLayout: FC<{}> = ({ children }) => {
+  useEffect(() => {
+    window.addEventListener('load',function(){
+      setTimeout(scrollTo,0,0,1);
+      },false);
+    }, []);
+  
   // const onScroll = useCallback((e) => {
   //   window.removeEventListener('mousewheel', onScroll);
   //   let prevTop = 0;
