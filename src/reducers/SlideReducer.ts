@@ -2,12 +2,20 @@ import { createAction, ActionType, createReducer } from 'typesafe-actions';
 
 // 상태의 타입 선언
 interface SlideReducer {
-  slideText: string;
+  Advertising: string;
+  Interview: string;
+  MusicVideo: string;
+  Promotion: string;
+  Sketch: string;
 }
 
 // 상태 초기화
 const initialState: SlideReducer = {
-  slideText: 'main',
+  Advertising: 'BHWYFfowcno',
+  Interview : 'JBR1MntFIaU',
+  MusicVideo :'uKDDwDHAft8',
+  Promotion : 'kkQTPHwWRU4',
+  Sketch : 'HeEpj8kBQtU',
 };
 
 // 액션타입 선언
@@ -27,16 +35,28 @@ type TestReducerActions = ActionType<typeof actions>;
 // 리듀서 추가
 const testReducer = createReducer<SlideReducer, TestReducerActions>(initialState, {
   [RESET_TEXT]: () => ({
-    slideText: '',
+  Advertising: '',
+  Interview : '',
+  MusicVideo :'',
+  Promotion : '',
+  Sketch : '',
   }),
   [ADD_TEXT]: (state, action) => {
-    console.log(state.slideText);
+    console.log(state.Advertising);
     return {
-      slideText: action.payload.slideText,
+      Advertising: action.payload.Advertising,
+      Interview: action.payload.Interview,
+      MusicVideo: action.payload.MusicVideo,
+      Promotion: action.payload.Promotion,
+      Sketch: action.payload.Sketch,
     };
   },
   [REMOVE_TEXT]: (state) => ({
-    slideText: '',
+    Advertising: '',
+    Interview: '',
+    MusicVideo: '',
+    Promotion: '',
+    Sketch: '',
   }),
 });
 

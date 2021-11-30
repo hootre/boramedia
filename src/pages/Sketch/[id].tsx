@@ -9,7 +9,6 @@ interface Props {
   detail: any;
 }
 const Detail: VFC<Props> = ({ data, data_detail }) => {
-  // console.log(data_detail);
   const [titleName, setTitleName] = useState('');
   useEffect(() => {
     var para = document.location.href.split('/');
