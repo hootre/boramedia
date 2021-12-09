@@ -39,6 +39,8 @@ export const MainContainer = styled.div`
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    width: 100%;
+    justify-content: center;
 
     img {
       opacity: 0.5;
@@ -65,11 +67,15 @@ export const MainContainer = styled.div`
 
 const AppLayout: FC<{}> = ({ children }) => {
   useEffect(() => {
-    window.addEventListener('load',function(){
-      setTimeout(scrollTo,0,0,1);
-      },false);
-    }, []);
-  
+    window.addEventListener(
+      'load',
+      function () {
+        setTimeout(scrollTo, 0, 0, 1);
+      },
+      false
+    );
+  }, []);
+
   // const onScroll = useCallback((e) => {
   //   window.removeEventListener('mousewheel', onScroll);
   //   let prevTop = 0;
@@ -146,18 +152,10 @@ const AppLayout: FC<{}> = ({ children }) => {
           <GlobalStyles />
           <div className="bottomBack">
             <div className="bottomText">
-              <h2>
-                보라미디어 | 사업자등록번호 : 593-56-00232  
-              </h2>
-              <h2>
-              주소 : 광진구 면목로 173
-              </h2>
-              <h2>
-                메일주소 : artinsky@boramedia.co.kr  
-              </h2>
-              <h2>
-              Phone : 010-2166-1895
-              </h2>
+              <h2>보라미디어 | 사업자등록번호 : 593-56-00232</h2>
+              <h2>주소 : 광진구 면목로 173</h2>
+              <h2>메일주소 : artinsky@boramedia.co.kr</h2>
+              <h2>Phone : 010-2166-1895</h2>
             </div>
           </div>
         </MainContainer>
