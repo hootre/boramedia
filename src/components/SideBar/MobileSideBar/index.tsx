@@ -29,23 +29,23 @@ const MobileSideBar = () => {
             <div className="email">artinsky@boramedia.co.kr</div>
           </div>
           <ul className="nav-left">
-          <li className={title == 'MusicVideo' ? 'active' : ''}>
-            <Link href="/MusicVideo/uKDDwDHAft8">뮤직비디오</Link>
-          </li>
-          <li className={title === 'Promotion' ? 'active' : ''}>
-            <Link href="/Promotion/cKMCPExesxs">제작영상</Link>
-          </li>
-          <li className={title === 'Interview' ? 'active' : ''}>
-            <Link href="/Interview/JBR1MntFIaU">배우 프로필</Link>
-          </li>
+            <li className={title == 'MusicVideo' ? 'active' : ''}>
+              <Link href="/MusicVideo/uKDDwDHAft8">뮤직비디오</Link>
+            </li>
+            <li className={title === 'Promotion' ? 'active' : ''}>
+              <Link href="/Promotion/cKMCPExesxs">제작영상</Link>
+            </li>
+            <li className={title === 'Interview' ? 'active' : ''}>
+              <Link href="/Interview/JBR1MntFIaU">배우 프로필</Link>
+            </li>
 
-          <li className={title === 'Sketch' ? 'active' : ''}>
-            <Link href="/Sketch/lY5mLZGCGp8">스케치/메이킹</Link>
-          </li> 
+            <li className={title === 'Sketch' ? 'active' : ''}>
+              <Link href="/Sketch/lY5mLZGCGp8">스케치/메이킹</Link>
+            </li>
 
-          <li className={router.pathname === '/Advertising' ? 'active' : ''}>
-            <Link href="/Advertising/jK7H55YB2zA">광고</Link>
-          </li>
+            <li className={router.pathname === '/Advertising' ? 'active' : ''}>
+              <Link href="/Advertising/BHWYFfowcno">광고</Link>
+            </li>
           </ul>
           <div className="sideBottomText">
             <h2>Phone | 010-2166-1895</h2>
