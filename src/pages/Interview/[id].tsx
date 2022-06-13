@@ -5,13 +5,13 @@ import React, { useEffect, useState, VFC } from 'react';
 import Head from 'next/head';
 interface Props {
   data: any;
+  data_detail: any;
   detail: any;
 }
-const Detail: VFC<Props> = ({ data }) => {
+const Detail: VFC<Props> = ({ data, data_detail }) => {
   const dataSort = data.sort((a: any, b: any) => {
     return a.snippet.categoryId - b.snippet.categoryId;
   });
-  const data_detail = dataSort[0];
   const [titleName, setTitleName] = useState('');
   useEffect(() => {
     var para = document.location.href.split('/');
@@ -23,7 +23,7 @@ const Detail: VFC<Props> = ({ data }) => {
         <title>BORAMEDIA | Interview</title>
         <meta name="MainPage" content="BORAMEDIA Interview." />
       </Head>
-      <VideoDetail titleName={titleName} list={data} data_detail={data_detail} />
+      <VideoDetail titleName={titleName} list={dataSort} data_detail={data_detail} />
     </>
   );
 };
@@ -81,11 +81,23 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
   const videos_res = await Axios.get('/videos', { params });
 
+  // Video Detail Search
+  params = {
+    key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+    part: 'snippet',
+    maxResults: 25,
+    id: context.params?.id,
+  };
+
+  const detail_res = await Axios.get('/videos', { params });
+
   const data = videos_res.data.items;
+  const data_detail = detail_res.data.items[0];
 
   return {
     props: {
       data,
+      data_detail,
     },
   };
 };

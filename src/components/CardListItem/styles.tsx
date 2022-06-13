@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardListItemBox = styled.a`
+export const CardListItemBox = styled.div`
   display: flex;
   align-items: center;
   text-align: left;
