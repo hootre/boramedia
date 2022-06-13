@@ -12,10 +12,10 @@ interface SlideReducer {
 // 상태 초기화
 const initialState: SlideReducer = {
   Advertising: 'BHWYFfowcno',
-  Interview : 'JBR1MntFIaU',
-  MusicVideo :'uKDDwDHAft8',
-  Promotion : 'kkQTPHwWRU4',
-  Sketch : 'HeEpj8kBQtU',
+  Interview: 'JBR1MntFIaU',
+  MusicVideo: 'uKDDwDHAft8',
+  Promotion: 'kkQTPHwWRU4',
+  Sketch: 'HeEpj8kBQtU',
 };
 
 // 액션타입 선언
@@ -35,14 +35,13 @@ type TestReducerActions = ActionType<typeof actions>;
 // 리듀서 추가
 const testReducer = createReducer<SlideReducer, TestReducerActions>(initialState, {
   [RESET_TEXT]: () => ({
-  Advertising: '',
-  Interview : '',
-  MusicVideo :'',
-  Promotion : '',
-  Sketch : '',
+    Advertising: '',
+    Interview: '',
+    MusicVideo: '',
+    Promotion: '',
+    Sketch: '',
   }),
   [ADD_TEXT]: (state, action) => {
-    console.log(state.Advertising);
     return {
       Advertising: action.payload.Advertising,
       Interview: action.payload.Interview,

@@ -29,7 +29,6 @@ interface Props {
   };
 }
 const CardListItem: VFC<Props> = ({ titleName, CardData }) => {
-  console.log(`CardListItem ${CardData.id}`);
   const router = useRouter();
   const title = router.pathname.split('/');
   return (

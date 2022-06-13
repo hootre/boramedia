@@ -23,9 +23,6 @@ interface Props {
 }
 const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
   const [viewMoreButton, setViewMoreButton] = useState(false);
-  const onClickViewMoreButton = useCallback(() => {
-    setViewMoreButton((prev) => !prev);
-  }, []);
   return (
     <VideoDetailBox>
       <div className="video_box">
