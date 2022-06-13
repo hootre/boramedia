@@ -32,7 +32,7 @@ const CardListItem: VFC<Props> = ({ titleName, CardData }) => {
   const router = useRouter();
   const title = router.pathname.split('/');
   return (
-    <Link href={title[2] ? CardData.id : `${titleName}/${CardData.id}`}>
+    <Link href={title[2] ? CardData.id : `${titleName}/${CardData.id}`} passHref>
       <CardListItemBox>
         <div className="imgBox">
           <img
