@@ -31,7 +31,7 @@ const MobileMenu: VFC<Props> = ({ secondSwiper, setFirstSwiper }) => {
           <Link href="/Sketch">스케치/메이킹</Link>
         </SwiperSlide>
         <SwiperSlide key="5" className={router.pathname === '/Advertising' ? 'active' : ''}>
-          <Link href="/Advertising">광고</Link>
+          <Link href="/Advertising">촬영</Link>
         </SwiperSlide>
       </Swiper>
     </MobileMenuContailner>

@@ -29,7 +29,7 @@ const SideBar = () => {
           </li>
 
           <li className={router.pathname === '/Advertising' ? 'active' : ''}>
-            <Link href="/Advertising/BHWYFfowcno">광고</Link>
+            <Link href="/Advertising/BHWYFfowcno">촬영</Link>
           </li>
         </ul>
       </NavItem>
