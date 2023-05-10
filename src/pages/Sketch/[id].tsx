@@ -10,7 +10,7 @@ interface Props {
 }
 const Detail: VFC<Props> = ({ data, data_detail }) => {
   const dataSort = data.sort((a: any, b: any) => {
-    return a.snippet.categoryId - b.snippet.categoryId;
+    return new Date(b.snippet.publishedAt).valueOf() - new Date(a.snippet.publishedAt).valueOf();
   });
   const [titleName, setTitleName] = useState('');
   useEffect(() => {
