@@ -6,18 +6,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import VideoList from '@components/VideoList';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper/core';
 import { useRouter } from 'next/dist/client/router';
-import { PC, Mobile } from '@utils/MediaQuery';
-import Link from 'next/link';
+import { useIsMobile } from '@utils/MediaQuery';
 SwiperCore.use([EffectCoverflow, Pagination]);
 interface Props {
   data: any;
 }
 const MainWrapper: VFC<Props> = ({ data }) => {
+  const isMobile = useIsMobile();
   const router = useRouter();
   const title = router.pathname.split('/')[1];
   return (
     <WrapperContainer>
-      <PC>
+      {isMobile ? (
+        <VideoList titleName={title ? title : '뮤직비디오'} list={data} />
+      ) : (
         <div className="contentContainer">
           <h1>{title ? title : '뮤직비디오'}</h1>
 
@@ -50,10 +52,7 @@ const MainWrapper: VFC<Props> = ({ data }) => {
             </Swiper>
           </div>
         </div>
-      </PC>
-      <Mobile>
-        <VideoList titleName={title ? title : '뮤직비디오'} list={data} />
-      </Mobile>
+      )}
     </WrapperContainer>
   );
 };

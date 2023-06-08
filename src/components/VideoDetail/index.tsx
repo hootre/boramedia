@@ -1,6 +1,6 @@
 import { Author } from '@components/MainCardVideo/styles';
 import VideoList from '@components/VideoList';
-import { PC } from '@utils/MediaQuery';
+import { useIsMobile } from '@utils/MediaQuery';
 import React, { useCallback, useState, VFC } from 'react';
 import { VideoDetailBox, VideoDetailText } from './styles';
 interface Props {
@@ -23,6 +23,7 @@ interface Props {
 }
 const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
   const [viewMoreButton, setViewMoreButton] = useState(false);
+  const isMobile = useIsMobile();
   return (
     <VideoDetailBox>
       <div className="video_box">
@@ -60,14 +61,7 @@ const VideoDetail: VFC<Props> = ({ titleName, list, data_detail }) => {
               </div>
             </Author>
           </div>
-          <PC>
-            <div className="title">{data_detail.snippet.title}</div>
-            {/* <div className="subtitle">{data_detail.snippet.description}</div>
-
-            <div className="viewMoreBtn" onClick={onClickViewMoreButton}>
-              {viewMoreButton ? '접기' : '더 보기'}
-            </div> */}
-          </PC>
+          {!isMobile && <div className="title">{data_detail.snippet.title}</div>}
         </VideoDetailText>
       </div>
       <VideoList titleName={titleName} list={list} />

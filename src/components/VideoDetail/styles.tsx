@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { PC, Tablet, Mobile } from '@utils/MediaQuery';
 interface DetailText {
   viewMoreButton: boolean;
 }
@@ -26,10 +25,10 @@ const VideoDetailText = styled.div`
     font-size: 3rem;
     color: #fff;
     margin: 16px 0 20px;
-      width:800px;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      white-space:nowrap;
+    width: 800px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .subtitle {
     font-size: 1.4rem;
@@ -59,7 +58,6 @@ const VideoDetailText = styled.div`
 
   @media (max-width: 1200px) {
     padding-left: 0;
-
   }
 `;
 const VideoDetailBox = styled.div`

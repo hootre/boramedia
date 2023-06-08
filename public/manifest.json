@@ -1,0 +1,7 @@
+{
+  "short_name": "BORA",
+  "name": "BORAMEDIA Video production",
+
+  "start_url": ".",
+  "display": "standalone"
+}

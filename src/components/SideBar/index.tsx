@@ -8,9 +8,7 @@ const SideBar = () => {
   return (
     <MainSideMenu>
       <LogoBox className="logo">
-        <Link href="/">
-          <a></a>
-        </Link>
+        <Link href="/"></Link>
       </LogoBox>
       <NavItem>
         <ul>

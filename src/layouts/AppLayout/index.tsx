@@ -1,7 +1,7 @@
 import GlobalStyles from '@components/GlobalStyles';
 import SideBar from '@components/SideBar';
 import MobileSideBar from '@components/SideBar/MobileSideBar';
-import { PC, Mobile } from '@utils/MediaQuery';
+import { useIsMobile } from '@utils/MediaQuery';
 import React, { FC, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 
@@ -66,6 +66,7 @@ export const MainContainer = styled.div`
 `;
 
 const AppLayout: FC<{}> = ({ children }) => {
+  const isMobile = useIsMobile();
   useEffect(() => {
     window.addEventListener(
       'load',
@@ -78,7 +79,13 @@ const AppLayout: FC<{}> = ({ children }) => {
 
   return (
     <>
-      <PC>
+      {isMobile ? (
+        <MainContainer>
+          <MobileSideBar />
+          {children}
+          <GlobalStyles />
+        </MainContainer>
+      ) : (
         <MainContainer>
           <SideBar />
           {children}
@@ -92,14 +99,7 @@ const AppLayout: FC<{}> = ({ children }) => {
             </div>
           </div>
         </MainContainer>
-      </PC>
-      <Mobile>
-        <MainContainer>
-          <MobileSideBar />
-          {children}
-          <GlobalStyles />
-        </MainContainer>
-      </Mobile>
+      )}
     </>
   );
 };
