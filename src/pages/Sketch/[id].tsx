@@ -40,8 +40,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     maxResults: 25,
     playlistId: process.env.NEXT_PUBLIC_SKETCH,
   };
-  const res = await Axios.get('/playlistItems', { params });
-  const data = res.data.items;
+  const res = await Axios.get('/playlistItems', { params }).catch(function (error) {
+    console.log(error);
+  });
+  const data = res?.data.items;
   const paths = data.map((item: any) => ({
     params: {
       id: `${item.snippet.resourceId.videoId}`,
@@ -65,9 +67,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     maxResults: 25,
     playlistId: process.env.NEXT_PUBLIC_SKETCH,
   };
-  const res = await Axios.get('/playlistItems', { params });
+  const res = await Axios.get('/playlistItems', { params }).catch(function (error) {
+    console.log(error);
+  });
 
-  const videoIdList = res.data.items
+  const videoIdList = res?.data.items
     .map((item: any) => {
       return item.snippet.resourceId.videoId;
     })
@@ -80,7 +84,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     maxResults: 25,
     id: videoIdList,
   };
-  const videos_res = await Axios.get('/videos', { params });
+  const videos_res = await Axios.get('/videos', { params }).catch(function (error) {
+    console.log(error);
+  });
 
   // Video Detail Search
   params = {
@@ -90,10 +96,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
     id: context.params?.id,
   };
 
-  const detail_res = await Axios.get('/videos', { params });
+  const detail_res = await Axios.get('/videos', { params }).catch(function (error) {
+    console.log(error);
+  });
 
-  const data = videos_res.data.items;
-  const data_detail = detail_res.data.items[0];
+  const data = videos_res?.data.items;
+  const data_detail = detail_res?.data.items[0];
 
   return {
     props: {

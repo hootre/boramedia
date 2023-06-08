@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import AppLayout from 'src/layouts/AppLayout';
 import Head from 'next/head';
 
+import { Analytics } from '@vercel/analytics/react';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
@@ -24,6 +25,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <AppLayout>
         <Component {...pageProps} />
       </AppLayout>
+      <Analytics />
     </>
   );
 };
